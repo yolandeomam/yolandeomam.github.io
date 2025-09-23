@@ -19,10 +19,58 @@
   </header>
 
   <section>
-    <h2>Om projektet</h2>
-    <p>Beskrivelse af arbejdsprocesser, optimering af teamarbejde og implementering af effektive projektmetoder.</p>
-
+    <h2>Sprint 0-1</h2>
+    <p>Det første møde har handlet om at:
+- afstemme forventninger med hensyn til tidsplan og mødefrekvens;
+- vælge den System udviklingsmetode: SCRUM i cirka 2 ugers sprint;
+- Diskutere det ønskede værdi, som systemet skal bringe, projektets muligheder, samt hvordan vores fagområder arbejder sammen og støtter hinanden, inkl. hvordan dette påvirker vores mål for projektet.
+- Indenfor AI har vi afstemt at udvikle en chatbot, et intelligent bookingsystem, som kan forberdre kundens oplevelse.
+- Indenfor Cyber Security har vi afstemt at arbejde med Penetration Testing for at simulere angreb og se hvor godt/dårligt er vores data beskyttet.
+- Mål for næste møde, som er at definere de forskellige use cases så vi kan planlægge sprint backlog items.</p>
     <p><a href="index.html">Tilbage til forsiden</a></p>
+  </section>
+
+    <section>
+    <h2>Sprint 0-2</h2>
+    <p>I denne Sprint Planlægning, har vi afstemt de forskellige use cases og valgt at arbejde med de følgende use case, hvor hver af os har fokus på en use case for den næste Sprint.
+Fra vores side vil fokus være på 'Oprettelse af en kunde' som use case, mens de andre vil have fokus på 'Oprettelse af Booking' og Spørgeskema til UX Design og en indsigt over Spil Use case. Valget af de use cases er nødvendigt indenfor vi kan begynde at arbejde med AI eller datascience..
+Git Repository er oprettet og der er blevet aftalt at have en check-in om en uge for at se fremskridt i projekt.</p>
+  </section>
+
+      <section>
+    <h2>Sprint 1-1</h2>
+    <p>I sprint 1 har vi besluttet os at arbejde med MVM (Model-View-Controller) arkitektur med med ASP.NET Core Web App (Model-View-Controller) fordi:
+- vi vil gerne prøve noget andet end den MVVM (Model-View-Viewmodel), som vi har brugt i tidligere projekter
+- vi vil gerne arbejde med C#
+- den framework har Web og App tilgængelige.
+Vi har aftalt at arbejde videre med de forskellige use case med CRUD operationer for bookinger og kunder, samt UX.</p>
+  </section>
+
+      <section>
+    <h2>Sprint 1-2</h2>
+    <p>Her er der videre fokus på design og implementering af CRUD operationer for bookinger og kunder samt UX design.
+En af vores læringsmål er beskyttelse af persondata. Derfor er det vigtigt at undersøge de forskellige reglerne, der skal tages i betragtning med hensyn til GDPR reglerne for en virksomhed i Danmark som Lazy Catz. 
+      De oplysninger giver også mulighed til at allerede tænke på Security By Design, når der skal implementeres GDPR reglerne. For eksempel dataminimering kræver at man skal bede personer om, de oplysninger, der er nødvendige for at fuldføre konkrakten. I vores tilfælde er det nødvendigt at vide navn af kunde, samt sin email og telefonnummer for at kunne bekræfte bookinger og kommunikere med de specifikke kunderne. Opbevaringsbegrænsning kræver at data må ikke gemmes længere end nødvendigt. Derfor arbejder vi på attributter, som gør det muligt at anonymisere og slette kundens personoplysninger, når de beder om det eller, hvis kunden ikke er aktiv i en periode.</p>
+  Vi bruger oplysninger fra, https://europa.eu/youreurope/business/dealing-with-customers/data-protection/data-protection-gdpr/index_da.htm, https://chatgpt.com/c/68c28867-b7d0-832c-90d5-f87b2fde5c48.
+  <p><a href="https://www.datatilsynet.dk/regler-og-vejledning/gdpr-univers-for-smaa-virksomheder/grundlaeggende-om-gdpr">Datatilsynet</a></p>
+  <p><a href="https://europa.eu/youreurope/business/dealing-with-customers/data-protection/data-protection-gdpr/index_da.htm">EU Databeskyttelse i henhold til GDPR</a></p>      
+  <p><a href="https://chatgpt.com/">ChatGPT</a></p>    
+      </section>
+
+     <section>
+    <h2>Sprint 1-3 - Implementering af GDPR regler og IT Sikkerhed</h2>
+    <p>Der arbejdes videre med implementering af GDPR regler og IT sikkerhed for kunden objekt.
+Lazy Catz GDRP Politik, samt det årlige GDPR-Træning til medarbejdere er lavet.
+Det er mening at hvis en kunde er inaktiv i et år, skal kundens informeres af inaktivitet og at dens profil skal slettes om et kort tid, hvis ingen reaktion fra kunde. I dette tilfælde bliver kundens profil anonymiseres og efter 5 år på grund af regnskabs regler slettes fra systemet.
+Det er også mening at kun den rette kunde skal have adgang til sin profil for at sikre adgangsstyring. Her arbejder vi med ASP.NET Core Identity, som er et framework til håndtering af brugere, roller, login og sikkerhed i en ASP.NET Core-applikation. På den måde når kunden logger ind, kan kunden se, opdatere eller slette sin profil.
+Planen er at arbejde videre med adgangsstyring og sikkerhed i systemet.</p>
+  </section>
+
+      <section>
+    <h2>Sprint 1-4</h2>
+    <p>Kunde CRUD operationer er implementeret. Kunden kan oprette sin profil, se, opdatere og slette sin profil. Kunden modtager mail notifikation, når profil er oprettet eller vedrørende opdateringer eller sletning af sin profil. Med hensyn til GDPR implementering er kundens data anonymiseres, hvis der sker sletning af kundens profil eller kunden har været inaktiv i mere end 1 år mht. at data bliver slettet efter 5 år. 
+    Administrator kan også logge ind og kan se alle kundens profilers og laver ændringer, hvis en kunde beder om det. Kunden modtager også mail notifikation, hvis Administrator laver ændringer på kundens profil. Se vedhæftede videoer og billeder om Kunde CRUD. Under næste møde skal vi diskutere om næste trin. 
+    Det er nødvendigt at kigge på sikkerhed i vores bookingsystem, samt at definere den sprogmodel, der skal udvikles.</p>
   </section>
 
   <footer>
