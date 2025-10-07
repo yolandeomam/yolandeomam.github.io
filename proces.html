@@ -73,6 +73,68 @@ Planen er at arbejde videre med adgangsstyring og sikkerhed i systemet.</p>
   <p><a href="index.html">Tilbage til forsiden</a></p>
   </section>
 
+  <section>
+  <h2>Sprint 2-1</h2>
+  <p>I dette sprint bliver der besluttet, at jeg arbejder på Use Case: <strong>Bruger kan kommunikere med KittyChat</strong>, Lazy Catz’s sprogmodel, imens fokuserer Maria på Frontend, UX og Gaming, og Line fokuserer på Data Science og på at lære om penetration testing.</p>
+
+  <p>Valget af denne use case kræver, at vi opnår viden, færdigheder og kompetencer inden for <strong>Generativ AI</strong> for at kunne udvikle sprogmodellen KittyChat. Målet med sprogmodellen er, at brugeren kan:</p>
+
+  <ul>
+    <li>Kommunikere med en Chatbot</li>
+    <li>Få information om bookingmuligheder og om en tid er tilgængelig via adgang til Lazy Catz’s database, specifikt tabellen <code>BOOKING</code></li>
+    <li>Få relevante links til adoption eller velfærd af katte</li>
+    <li>Få relevante oplysninger om Lazy Catz, såsom åbningstider, hvad Lazy Catz er, og på sigt information om lokation, GPS, transport og parkeringsmuligheder</li>
+  </ul>
+</section>
+
+  <section>
+  <h2>Sprint 2-2</h2>
+  <p>Efter at have læst om Generativ AI via:</p>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/" target="_blank">https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/</a></li>
+    <li><a href="https://dm.dk/kom/alle-artikler/2024/guide-byg-din-egen-sprogmodel/" target="_blank">https://dm.dk/kom/alle-artikler/2024/guide-byg-din-egen-sprogmodel/</a></li>
+    <li>ChatGPT</li>
+  </ul>
+
+  <p>Bliver der identificeret tre muligheder for at implementere en sprogmodel:</p>
+  <ol>
+    <li><strong>Bruge et API</strong> til at konnektere til eksisterende sprogmodeller (LLMs).  
+    Her lader man en ekstern og effektiv sprogmodel få adgang til vores database, men man skal betale for at bruge API’et.</li>
+
+    <li><strong>Bygge sin egen sprogmodel fra bunden</strong>,  
+    hvilket er meget kostbart, kræver mange ressourcer, tid og en stor mængde træningsdata.</li>
+
+    <li><strong>Fine-tune et eksisterende framework</strong> og derefter konnektere via FastAPI til den lokale fine-tunede sprogmodel.</li>
+  </ol>
+
+  <p>Vi valgte den tredje mulighed – at fine-tune et eksisterende framework – så vi får en lokal fine-tunet sprogmodel <strong>KittyChat</strong>, fordi:</p>
+  <ul>
+    <li>Den er omkostningsfri</li>
+    <li>At have modellen lokalt sikrer, at vi har fuld kontrol over sprogmodellen og dens anvendelse</li>
+    <li>Vi ønsker at beskytte brugerens persondata og sikre, at de ikke ender i forkerte hænder</li>
+  </ul>
+
+  <p>Der blev aftalt at arbejde videre med sprogmodellen og implementere en lokal fine-tunet version af <strong>KittyChat</strong>.</p>
+</section>
+
+  <section>
+  <h2>Sprint 2-3</h2>
+  <p>I dette sprint har fokus været på udviklingen og den første træning af <strong>sprogmodellen KittyChat</strong>. Formålet var at gøre modellen i stand til at kommunikere med brugere og integreres med Lazy Catz’s system. Dette krævede opsætning af træningsdata, modelkonfiguration og forberedelse af forbindelse til databasen.</p>
+
+  <p>Sprogmodellen er forbundet til Lazy Catz’s system, men kræver fortsat løbende træning for at kunne levere præcise og relevante svar. Målet er, at brugeren kan:</p>
+
+  <ul>
+    <li>Kommunikere med en Chatbot</li>
+    <li>Få information om bookingmuligheder og om en tid er tilgængelig via adgang til Lazy Catz’s database, specifikt tabellen <code>BOOKING</code></li>
+    <li>Få relevante links til adoption eller velfærd af katte</li>
+    <li>Få relevante oplysninger om Lazy Catz, såsom åbningstider, hvad Lazy Catz er, og på sigt information om lokation, GPS, transport og parkeringsmuligheder</li>
+  </ul>
+
+  <p>Det næste trin i projektet handler om at <strong>træne og finjustere sprogmodellen KittyChat</strong> for at forbedre dens svarnøjagtighed og fuldt integrere den i Lazy Catz’s applikation.</p>
+</section>
+
+
+
   <footer>
     <p>© 2025 Yolande Omam | Portfolio</p>
   </footer>
