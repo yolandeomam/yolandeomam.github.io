@@ -10,6 +10,11 @@
     a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
     footer { background: #0066cc; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+    img { max-width: 100%; display: block; margin: 1rem 0; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 0.5rem; text-align: left; }
+    pre { background: #eee; padding: 1rem; overflow-x: auto; border-radius: 8px; }
   </style>
 </head>
 <body>
@@ -21,345 +26,112 @@
   <section>
     <h2>Om projektet</h2>
     <p>Dette projekt udvikler en AI-baseret løsning til at automatisere booking og kundeservice, med fokus på naturlig sprogforståelse og intelligente anbefalinger.</p>
-    
   </section>
 
   <section>
-  <h2>Læringsmål: Generativ AI</h2>
+    <h2>Læringsmål: Generativ AI</h2>
+    <h3>Viden</h3>
+    <ul>
+      <li>Den studerende har viden om teorien bag <strong>Generativ AI</strong> og <strong>Large Language Models (LLMs)</strong>, herunder deres opbygning, træning og anvendelse i praksis.</li>
+      <li>Den studerende har forståelse for <strong>forskellen mellem foundation models og LLMs</strong>, samt forskellen mellem open-source og proprietære modeller (fx GPT, LLaMA, Mistral, Falcon).</li>
+      <li>Den studerende har viden om <strong>etiske, samfundsmæssige og datasikkerhedsmæssige aspekter</strong> ved anvendelsen af Generativ AI, herunder beskyttelse af persondata og ansvarlig brug af modeller.</li>
+      <li>Den studerende har viden om <strong>tekniske implementeringsstrategier</strong> – herunder API-integration, model fine-tuning, og brug af frameworks som <code>Transformers</code> og <code>PyTorch</code> i praksis.</li>
+    </ul>
 
-  <h3>Viden</h3>
-  <ul>
-    <li>Den studerende har viden om teorien bag <strong>Generativ AI</strong> og <strong>Large Language Models (LLMs)</strong>, herunder deres opbygning, træning og anvendelse i praksis.</li>
-    <li>Den studerende har forståelse for <strong>forskellen mellem foundation models og LLMs</strong>, samt forskellen mellem open-source og proprietære modeller (fx GPT, LLaMA, Mistral, Falcon).</li>
-    <li>Den studerende har viden om <strong>etiske, samfundsmæssige og datasikkerhedsmæssige aspekter</strong> ved anvendelsen af Generativ AI, herunder beskyttelse af persondata og ansvarlig brug af modeller.</li>
-    <li>Den studerende har viden om <strong>tekniske implementeringsstrategier</strong> – herunder API-integration, model fine-tuning, og brug af frameworks som <code>Transformers</code> og <code>PyTorch</code> i praksis.</li>
-  </ul>
+    <h3>Færdigheder</h3>
+    <ul>
+      <li>Den studerende kan <strong>udvælge og beskrive</strong> relevante teknologier og metoder til udvikling af en Generativ AI-løsning.</li>
+      <li>Den studerende kan <strong>foretage litteratursøgning og vidensopsamling</strong> gennem kilder som Microsoft Learn og DM’s vejledning <em>“Byg din egen sprogmodel”</em>.</li>
+      <li>Den studerende kan <strong>diskutere samfundsmæssige og etiske konsekvenser</strong> af AI – herunder ansvar, datasikkerhed og bias i sprogmodeller.</li>
+      <li>Den studerende kan <strong>anvende prompt engineering</strong> til at forbedre modellens præcision og relevans ud fra kontekst.</li>
+      <li>Den studerende kan <strong>vurdere og opstille løsningsmuligheder</strong> for at vælge den mest passende implementeringsstrategi (API, open-source model, eller finetuning).</li>
+      <li>Den studerende kan <strong>formidle resultater</strong> gennem teknisk dokumentation, GitHub-rapporter og projektbeskrivelser.</li>
+    </ul>
 
-  <h3>Færdigheder</h3>
-  <ul>
-    <li>Den studerende kan <strong>udvælge og beskrive</strong> relevante teknologier og metoder til udvikling af en Generativ AI-løsning.</li>
-    <li>Den studerende kan <strong>foretage litteratursøgning og vidensopsamling</strong> gennem kilder som Microsoft Learn og DM’s vejledning <em>“Byg din egen sprogmodel”</em>.</li>
-    <li>Den studerende kan <strong>diskutere samfundsmæssige og etiske konsekvenser</strong> af AI – herunder ansvar, datasikkerhed og bias i sprogmodeller.</li>
-    <li>Den studerende kan <strong>anvende prompt engineering</strong> til at forbedre modellens præcision og relevans ud fra kontekst.</li>
-    <li>Den studerende kan <strong>vurdere og opstille løsningsmuligheder</strong> for at vælge den mest passende implementeringsstrategi (API, open-source model, eller finetuning).</li>
-    <li>Den studerende kan <strong>formidle resultater</strong> gennem teknisk dokumentation, GitHub-rapporter og projektbeskrivelser.</li>
-  </ul>
-
-  <h3>Kompetencer</h3>
-  <ul>
-    <li>Den studerende kan <strong>selvstændigt tilegne sig ny viden</strong> inden for Generativ AI, herunder nye frameworks, API’er og modeller.</li>
-    <li>Den studerende kan <strong>anvende og perspektivere Generativ AI</strong> i relation til softwareudvikling og dataanalyse – fx ved at bygge en intelligent booking-chatbot.</li>
-    <li>Den studerende kan <strong>forholde sig kritisk</strong> til modellens output og anvende sin faglige viden til at sikre kvalitet og relevans i AI-besvarelser.</li>
-    <li>Den studerende kan <strong>integrere sprogmodeller i eksisterende IT-systemer</strong> og anvende domænespecifikke data (fx Lazy Catz’ booking- og katteinformationer) til at skabe værdifulde løsninger.</li>
-  </ul>
-</section>
-
-  <section>
-  <h2>Refleksion og læring: Generativ AI</h2>
-
-  <p>
-    I mit arbejde med udviklingen af <strong>sprogmodellen KittyChat</strong> for Lazy Catz har jeg opnået en dyb forståelse af, hvordan <strong>Generativ AI</strong> fungerer — både konceptuelt og teknisk. 
-    Jeg har undersøgt forskellige strategier for implementering af sprogmodeller og lært, hvordan teori, etik og praksis spiller sammen, når man bygger en AI-løsning til et specifikt domæne som vores kattecafé.
-  </p>
-
-  <h3>Overblik over implementeringsmuligheder</h3>
-  <p>
-    Jeg har identificeret tre hovedtilgange til at bygge eller anvende en sprogmodel:
-  </p>
-  <ul>
-    <li><strong>1. Brug af eksisterende API’er (fx OpenAI GPT-4 eller Azure OpenAI):</strong> En hurtig og effektiv metode, hvor man integrerer en færdigtrænet model i sit eget system. Fordelen er høj kvalitet og minimal opsætning, men man mister fuld kontrol og pådrager sig løbende API-omkostninger.</li>
-    <li><strong>2. Brug af open-source modeller (fx LLaMA 3, Falcon, Mistral):</strong> Giver frihed og ejerskab, men kræver mere hardware og teknisk kompetence. Modellen kan køre lokalt, men uden finetuning er svarene mindre domænespecifikke.</li>
-    <li><strong>3. Fine-tuning af open-source modeller:</strong> Den mest krævende, men også mest specialiserede tilgang. Her trænes en eksisterende model videre på vores egne data fra Lazy Catz’ database, så den bliver bedre til at forstå booking, adoption og katteoplysninger. Denne metode giver maksimal præcision og ejerskab, men kræver ML-kendskab og GPU-ressourcer.</li>
-  </ul>
-
-  <p>
-    I arbejdet med disse muligheder reflekterede jeg over <strong>balancen mellem kontrol, kompleksitet og ressourceforbrug</strong>. 
-    Jeg fandt det særligt interessant, hvordan valg af teknologi afspejler virksomhedens strategi: 
-    hurtig implementering med API’er versus dybere ejerskab gennem egen model.
-  </p>
-
-  <h3>Teoretisk indsigt og praktisk forståelse</h3>
-  <p>
-    Gennem kurset <a href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/" target="_blank"><em>Generative AI for Beginners</em></a> fra Microsoft Learn og DM’s vejledning 
-    <a href="https://dm.dk/kom/alle-artikler/2024/guide-byg-din-egen-sprogmodel/" target="_blank"><em>“Byg din egen sprogmodel”</em></a> 
-    lærte jeg om de centrale begreber i Generativ AI:
-  </p>
-  <ul>
-    <li><strong>Foundation Models vs LLMs:</strong> Alle LLM’er er foundation models, men ikke alle foundation models er sprogmodeller. Dette hjalp mig til at forstå, hvorfor LLM’er er så fleksible i anvendelse.</li>
-    <li><strong>Prompt Engineering:</strong> Jeg har lært, at præcision i prompten er afgørende. Jo mere kontekst og detaljer jeg tilføjer, desto bedre bliver output. Dette blev tydeligt, da jeg testede forskellige prompts i udviklingen af KittyChat.</li>
-    <li><strong>Tokenization og kontekst:</strong> Jeg forstod, hvordan sprogmodeller opdeler tekst i tokens og genererer svar ved at forudsige næste token baseret på sandsynlighed og kontekst.</li>
-    <li><strong>Ansvarlig brug:</strong> Jeg blev bevidst om vigtigheden af etik, bias, datasikkerhed og gennemsigtighed i AI-udvikling. En sprogmodel fritager ikke udvikleren for ansvar — den kræver kritisk stillingtagen til data og output.</li>
-  </ul>
-
-  <h3>Metodisk tilgang: Byg din egen sprogmodel</h3>
-  <p>
-    Jeg fulgte DM’s 8-trinsguide til at bygge en sprogmodel, hvilket hjalp mig til at strukturere arbejdet systematisk:
-  </p>
-  <ol>
-    <li><strong>Formål:</strong> Udvikle en sprogmodel til et intelligent bookingsystem for Lazy Catz café.</li>
-    <li><strong>Afgrænsning:</strong> Fokus på booking, katteoplysninger, adoption, virksomhedsinformation og lokation.</li>
-    <li><strong>Valg af teknologi:</strong> Overvejelse mellem API, open-source eller egen fine-tunet model afhængigt af ressourcer og etiske retningslinjer.</li>
-    <li><strong>Datasikkerhed:</strong> Fokus på beskyttelse af persondata og forebyggelse af uautoriseret adgang.</li>
-    <li><strong>Fodring af data:</strong> Brug af relevante data fra Lazy Catz’ database (<code>BOOKING</code> og <code>CAT</code>) samt eksterne kilder om katteadfærd og adoption.</li>
-    <li><strong>Det rette sprog:</strong> Valg af dansk og engelsk med en professionel, men legende tone – inspireret af temaet “at tale med en kat”.</li>
-    <li><strong>Test:</strong> Brugertest for at sikre, at modellen leverer forståelige og nyttige svar.</li>
-    <li><strong>Vedligehold:</strong> Refleksion over, hvordan modellen kan udvikles løbende og fodres med nye data.</li>
-  </ol>
-
-  <h3>Refleksion</h3>
-  <p>
-    Gennem dette forløb har jeg fået et <strong>teoretisk og praktisk fundament i Generativ AI</strong>. 
-    Jeg har lært at tænke kritisk over teknologiens muligheder og begrænsninger, og jeg forstår nu, hvordan man vælger mellem forskellige implementeringsstrategier alt efter kontekst og formål.  
-    Jeg har også indset, at udviklingen af en sprogmodel ikke blot er et teknisk projekt, men et <strong>etisk og organisatorisk ansvar</strong>, hvor datasikkerhed, gennemsigtighed og kvalitet spiller en afgørende rolle.
-  </p>
-
-  <p>
-    Den største læring har været at se, hvordan <strong>Generativ AI kan tilpasses et konkret domæne</strong> – her en kattecafé – og hvordan fine-tuning, prompt engineering og etisk design kan kombineres for at skabe en brugbar, venlig og meningsfuld løsning.
-  </p>
-
-  <p>
-    <strong>Eksterne læringskilder:</strong><br>
-    📘 <a href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/" target="_blank">Generative AI for Beginners (Microsoft Learn)</a><br>
-    🧭 <a href="https://dm.dk/kom/alle-artikler/2024/guide-byg-din-egen-sprogmodel/" target="_blank">DM: Byg din egen sprogmodel</a><br>
-    🤖 <a href="https://chat.openai.com" target="_blank">ChatGPT – praktisk eksperimentering og prompt engineering</a>
-  </p>
-</section>
-
-<section>
-  <h2>Implementering af Generativ AI med sprogmodel KittyChat</h2>
-
-  <p>
-    <strong>KittyChat</strong> bygger på en <strong>Large Language Model (LLM)</strong>. Den anvender en fortrænet generativ sprogmodel (GPT-type) som base – en model, der er trænet til at forudsige det næste token i en sekvens.
-  </p>
-
-  <h3>Oversigt over sprogmodel KittyChat</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Komponent</th>
-        <th>Type</th>
-        <th>Funktion</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Base-model</td>
-        <td>Causal Language Model (fx LLaMA 2, GPT-2)</td>
-        <td>Generel sprogforståelse</td>
-      </tr>
-      <tr>
-        <td>Tilpasning</td>
-        <td>LoRA / PEFT fine-tuning</td>
-        <td>Lærer KittyChat’s persona og regler</td>
-      </tr>
-      <tr>
-        <td>Datasæt</td>
-        <td><code>kittychat_train.jsonl</code></td>
-        <td>Domænespecifik dialogdata</td>
-      </tr>
-      <tr>
-        <td>Træningsscript</td>
-        <td><code>train_lora.py</code></td>
-        <td>Finetuner basismodellen</td>
-      </tr>
-      <tr>
-        <td>Inference-server</td>
-        <td><code>serve_model.py</code></td>
-        <td>Genererer svar fra den tilpassede model</td>
-      </tr>
-      <tr>
-        <td>Frontend</td>
-        <td>ASP.NET / Blazor</td>
-        <td>Sender intents og kontekst til API’et</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h3>Den basismodel</h3>
-  <p>
-    I koden ses dette i linjen: <code>from transformers import AutoModelForCausalLM</code> i filen <code>serve_model.py</code>.
-  </p>
-
-  <figure>
-    <img src="images/LLMBaseModel.png" alt="Illustration af den anvendte LLM-basemodel" style="max-width: 80%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <figcaption>Figur 1. Den anvendte basismodel (Causal Language Model)</figcaption>
-  </figure>
-
-  <p>
-    Dette betyder, at modellen er en <strong>Causal Language Model (CLM)</strong> – samme type arkitektur som GPT-2 eller LLaMA. 
-    Den eksisterende LLM hentes som base:
-  </p>
-
-  <pre><code>MODEL_NAME = os.environ.get("BASE_MODEL", "meta-llama/Llama-2-7b-chat-hf")</code></pre>
-
-  <p>
-    Basismodellen er altså <strong>meta-llama/Llama-2-7b-chat-hf</strong> fra Meta (eller en fallback som <code>gpt2</code>, hvis der køres lokalt uden LLaMA).
-    Disse modeller er fortrænede på store mængder tekst og kan generere naturligt sprog, men de kender ikke noget om <em>KittyChat</em>, <em>LazyCatz café</em> eller vores intents.
-  </p>
-
-  <h3>Finjustering med LoRA (Low-Rank Adaptation)</h3>
-  <p>
-    Filen <code>train_lora.py</code> viser, at vi finetuner base-LLM’en med teknikken <strong>LoRA (Low-Rank Adapter)</strong>.
-  </p>
-
-  <pre><code>from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training</code></pre>
-
-  <figure>
-    <img src="images/LLMFinetuneModelLoRA.png" alt="Diagram over LoRA finjusteringsmetode" style="max-width: 80%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <figcaption>Figur 2. LoRA-finjustering af sprogmodellen</figcaption>
-  </figure>
-
-  <p>
-    Dette betyder, at vi kun træner et lille antal ekstra parametre — ikke hele 7 mia. modelparametre.
-    Dermed kan modellen køre og trænes på en almindelig GPU eller endda CPU.
-    LoRA er en del af <strong>PEFT</strong> (Parameter-Efficient Fine-Tuning), som gør tilpasningen praktisk og billig,
-    samtidig med at modellen lærer KittyChat’s persona og regler.
-  </p>
-
-  <h3>Træningsdata</h3>
-  <p>
-    Vores datasæt <code>kittychat_train.jsonl</code> består af domænespecifik dialogdata. Et eksempel:
-  </p>
-
-  <pre><code>{
-  "user": "Jeg vil gerne booke tid kl. 16",
-  "context": {"availability": true},
-  "completion": "Tidspunktet er ledigt for 1 person kl. 16:00. Vil du bekræfte?"
-}</code></pre>
-
-  <p>
-    Under træningen bygges der et prompt som:
-  </p>
-
-  <pre><code>You are KittyChat, the friendly booking assistant for LazyCatz café.
-User: Jeg vil gerne booke tid kl. 16
-Context: {"availability": true}
-Assistant: Tidspunktet er ledigt for 1 person kl. 16:00. Vil du bekræfte?
-</code></pre>
-
-  <p>
-    Modellen lærer dermed at svare som <strong>KittyChat</strong> ud fra <em>intent</em> og <em>context</em>.
-  </p>
-
-  <h3>Træningsmekanismen</h3>
-  <p>
-    I <code>train_lora.py</code> sker følgende trin:
-  </p>
-
-  <ol>
-    <li>Dataset indlæses:<br><code>ds = load_dataset('json', data_files={'train': TRAIN_FILE})['train']</code></li>
-    <li>Prompt bygges og tokeniseres</li>
-    <li>Base-modellen indlæses</li>
-    <li>LoRA-adapteren tilføjes</li>
-    <li>Model trænes med <code>Trainer</code></li>
-    <li>LoRA-parametre gemmes i <code>./lora_checkpoints/</code></li>
-  </ol>
-
-  <h3>Anvendelse i serveren</h3>
-  <p>
-    I <code>serve_model.py</code> indlæses den finjusterede model:
-  </p>
-
-  <pre><code>model = AutoModelForCausalLM.from_pretrained(
-    MODEL_DIR,
-    torch_dtype=torch.float16,
-    device_map='auto',
-    local_files_only=True
-)</code></pre>
-
-  <p>
-    Prompten bygges ud fra <em>intent</em> og <em>context</em>:
-  </p>
-
-  <pre><code>prompt = construct_prompt(req.intent, req.context)</code></pre>
-
-  <p>
-    Et eksempel på en forespørgsel til API’et:
-  </p>
-
-  <pre><code>{
-  "session_id": "abc123",
-  "intent": "cat_info",
-  "context": {
-    "procedure": "uspGetCatByName",
-    "result": [
-      {"CatId": 3, "Name": "Simba", "Breed": "British Shorthair", "Age": 3}
-    ]
-  }
-}</code></pre>
-
-  <p>
-    Dette omdannes til følgende prompt:
-  </p>
-
-  <pre><code>You are KittyChat, the friendly booking assistant for LazyCatz café.
-Intent: cat_info
-Context:
-| CatId | Name | Breed | Age |
-|-------|------|--------|-----|
-| 3 | Simba | British Shorthair | 3 |
-Assistant:
-</code></pre>
-
-  <p>
-    Modellen genererer derefter et svar i KittyChat-stil.
-  </p>
-
-  <h3>Konklusion</h3>
-  <p>
-    <strong>KittyChat</strong> er en parameter-effektivt finjusteret LLaMA/GPT-type <em>Causal Language Model</em>,
-    trænet via <strong>LoRA</strong> på et domænespecifikt dialogdatasæt og anvendt gennem en <strong>FastAPI-server</strong>, 
-    som genererer svar baseret på <em>intents</em> og <em>SQL-kontekst</em>.
-  </p>
-</section>
+    <h3>Kompetencer</h3>
+    <ul>
+      <li>Den studerende kan <strong>selvstændigt tilegne sig ny viden</strong> inden for Generativ AI, herunder nye frameworks, API’er og modeller.</li>
+      <li>Den studerende kan <strong>anvende og perspektivere Generativ AI</strong> i relation til softwareudvikling og dataanalyse – fx ved at bygge en intelligent booking-chatbot.</li>
+      <li>Den studerende kan <strong>forholde sig kritisk</strong> til modellens output og anvende sin faglige viden til at sikre kvalitet og relevans i AI-besvarelser.</li>
+      <li>Den studerende kan <strong>integrere sprogmodeller i eksisterende IT-systemer</strong> og anvende domænespecifikke data (fx Lazy Catz’ booking- og katteinformationer) til at skabe værdifulde løsninger.</li>
+    </ul>
+  </section>
 
   <section>
-  <h2>Træning af data</h2>
+    <h2>Refleksion og læring: Generativ AI</h2>
+    <p>I mit arbejde med udviklingen af <strong>sprogmodellen KittyChat</strong> for Lazy Catz har jeg opnået en dyb forståelse af, hvordan <strong>Generativ AI</strong> fungerer — både konceptuelt og teknisk. Jeg har undersøgt forskellige strategier for implementering af sprogmodeller og lært, hvordan teori, etik og praksis spiller sammen, når man bygger en AI-løsning til et specifikt domæne som vores kattecafé.</p>
 
-  <h3>Den første draft af data</h3>
-  <p>
-    KittyChat kan svare på spørgsmål om bookinger, men det er ikke muligt at oprette en booking som ny bruger eller eksisterende bruger.
-    KittyChat kan desværre ikke svare om katte i forretningen, andre oplysninger om katte, adoption eller andre typer spørgsmål.
-  </p>
+    <h3>Overblik over implementeringsmuligheder</h3>
+    <ul>
+      <li><strong>1. Brug af eksisterende API’er (fx OpenAI GPT-4 eller Azure OpenAI):</strong> Hurtig metode med høj kvalitet og minimal opsætning, men løbende API-omkostninger.</li>
+      <li><strong>2. Brug af open-source modeller (fx LLaMA 3, Falcon, Mistral):</strong> Giver ejerskab og frihed, kræver hardware og teknisk kompetence. Uden finetuning mindre domænespecifikke svar.</li>
+      <li><strong>3. Fine-tuning af open-source modeller:</strong> Specialiseret tilgang, trænes på egne data fra Lazy Catz’ database, giver høj præcision og ejerskab, kræver ML-kendskab og GPU.</li>
+    </ul>
 
-  <p><em>Billeder af første draft:</em></p>
-  <img src="images/DraftData1.png" alt="Draft Data 1" />
-  <img src="images/DraftData2.png" alt="Draft Data 2" />
-  <img src="images/DraftData3.png" alt="Draft Data 3" />
+    <h3>Teoretisk indsigt og praktisk forståelse</h3>
+    <ul>
+      <li><strong>Foundation Models vs LLMs:</strong> Alle LLM’er er foundation models, men ikke omvendt.</li>
+      <li><strong>Prompt Engineering:</strong> Præcision i prompten er afgørende for bedre output.</li>
+      <li><strong>Tokenization og kontekst:</strong> Modellen opdeler tekst i tokens og forudsiger næste token baseret på kontekst.</li>
+      <li><strong>Ansvarlig brug:</strong> Etik, bias, datasikkerhed og gennemsigtighed er afgørende.</li>
+    </ul>
 
-  <h3>Data er trænet med nye indsigter</h3>
-  <p>
-    Efter at have tilføjet katte-emojis 🐾 og “miav”-udtryk i træningsdataen, samt et tabel-format til visning af fx alle katte i caféen, kan man observere følgende forbedringer i KittyChat-sprogmodellen:
-  </p>
-  <ul>
-    <li>Viser nu et mere læsbart format ved visning og output af tabeller</li>
-    <li>Foreslår tidspunkter for booking</li>
-    <li>Kan give klikbare links til katteadoption (dog ikke altid)</li>
-    <li>Kan endnu ikke give oplysninger om Lazy Catz’s generelle information, selvom det findes i data</li>
-    <li>Vælger selv, om den svarer på dansk eller engelsk</li>
-    <li>Svarer korrekt på spørgsmål om åbningstider</li>
-    <li>Viser kattens personlighed gennem brug af katte-emojis 🐱</li>
-  </ul>
+    <h3>Metodisk tilgang: Byg din egen sprogmodel</h3>
+    <ol>
+      <li><strong>Formål:</strong> Udvikle en sprogmodel til intelligent bookingsystem for Lazy Catz café.</li>
+      <li><strong>Afgrænsning:</strong> Fokus på booking, katteoplysninger, adoption, virksomhedsinformation og lokation.</li>
+      <li><strong>Valg af teknologi:</strong> API, open-source eller egen fine-tunet model afhængigt af ressourcer og etik.</li>
+      <li><strong>Datasikkerhed:</strong> Beskyttelse af persondata og forebyggelse af uautoriseret adgang.</li>
+      <li><strong>Fodring af data:</strong> Lazy Catz’ database (<code>BOOKING</code> og <code>CAT</code>) + eksterne kilder om katteadfærd og adoption.</li>
+      <li><strong>Det rette sprog:</strong> Dansk og engelsk med professionel, legende tone.</li>
+      <li><strong>Test:</strong> Brugertest for at sikre forståelige og nyttige svar.</li>
+      <li><strong>Vedligehold:</strong> Refleksion over løbende udvikling og dataopdatering.</li>
+    </ol>
 
-  <p>
-    Hvis en bruger er logget ind og får en tid via KittyChat, oprettes bookingen i Lazy Catz’ database, når brugeren bekræfter tiden – selvom der vises en fejlbesked. Dette skyldes, at der på nuværende tidspunkt endnu ikke findes en dedikeret bookingside på hjemmesiden.
-  </p>
-  <p>
-    Det betyder også, at KittyChat via en stored procedure kan foretage ændringer i databasen, men den har stadig vanskeligheder med at læse data direkte fra tabellerne i Lazy Catz’ database.
-  </p>
-  <p>
-    Dette kan relateres til selve definitionen af en sprogmodel: Den tager et input (fx en sætning, et spørgsmål eller en prompt) og beregner sandsynligheden for, hvilket næste ord (token) der mest sandsynligt følger. Derfor finder modellen måske ikke altid det eksakte ord eller den præcise værdi, man ønsker i databasen.
-  </p>
-
-  <p><em>Eksempler på trænet model i aktion:</em></p>
-  <img src="images/KittyChatRunning.png" alt="KittyChat Running" />
-  <img src="images/DataTrain1.png" alt="Data Train 1" />
-  <img src="images/DataTrain2.png" alt="Data Train 2" />
-</section>
+    <h3>Refleksion</h3>
+    <p>Gennem forløbet har jeg fået et <strong>teoretisk og praktisk fundament i Generativ AI</strong>. Jeg har lært at vælge implementeringsstrategi alt efter kontekst og formål og forstået, at udvikling af sprogmodeller også er et <strong>etisk og organisatorisk ansvar</strong>.</p>
+    <p>Den største læring har været at se, hvordan <strong>Generativ AI kan tilpasses et konkret domæne</strong> – her en kattecafé – og hvordan fine-tuning, prompt engineering og etisk design kombineres til brugbare løsninger.</p>
+    <p><strong>Eksterne læringskilder:</strong><br>
+       <a href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/" target="_blank">Generative AI for Beginners (Microsoft Learn)</a><br>
+       <a href="https://dm.dk/kom/alle-artikler/2024/guide-byg-din-egen-sprogmodel/" target="_blank">DM: Byg din egen sprogmodel</a><br>
+       <a href="https://chat.openai.com" target="_blank">ChatGPT – praktisk eksperimentering og prompt engineering</a>
+    </p>
+  </section>
 
   <section>
-   <p><a href="index.html">Tilbage til forsiden</a></p>
-    </section>
+    <h2>Træning af data</h2>
+
+    <h3>Den første draft af data</h3>
+    <p>KittyChat kan svare på spørgsmål om bookinger, men det er ikke muligt at oprette en booking som ny bruger eller eksisterende bruger. KittyChat kan desværre ikke svare om katte i forretningen, andre oplysninger om katte, adoption eller andre typer spørgsmål.</p>
+    <p><em>Billeder af første draft:</em></p>
+    <img src="images/DraftData1.png" alt="Draft Data 1" />
+    <img src="images/DraftData2.png" alt="Draft Data 2" />
+    <img src="images/DraftData3.png" alt="Draft Data 3" />
+
+    <h3>Data er trænet med nye indsigter</h3>
+    <ul>
+      <li>Viser nu et mere læsbart format ved visning og output af tabeller</li>
+      <li>Foreslår tidspunkter for booking</li>
+      <li>Kan give klikbare links til katteadoption (dog ikke altid)</li>
+      <li>Kan endnu ikke give oplysninger om Lazy Catz’s generelle information, selvom det findes i data</li>
+      <li>Vælger selv, om den svarer på dansk eller engelsk</li>
+      <li>Svarer korrekt på spørgsmål om åbningstider</li>
+      <li>Viser kattens personlighed gennem brug af katte-emojis 🐱</li>
+    </ul>
+
+    <p>Hvis en bruger er logget ind og får en tid via KittyChat, oprettes bookingen i Lazy Catz’ database, når brugeren bekræfter tiden – selvom der vises en fejlbesked.</p>
+    <p>KittyChat kan via stored procedure foretage ændringer i databasen, men har stadig vanskeligheder med at læse data direkte fra tabellerne.</p>
+    <p>Dette relaterer til sprogmodellens funktion: Input behandles for at forudsige næste token, hvilket ikke altid giver det præcise ord fra databasen.</p>
+
+    <p><em>Eksempler på trænet model i aktion:</em></p>
+    <img src="images/KittyChatRunning.png" alt="KittyChat Running" />
+    <img src="images/DataTrain1.png" alt="Data Train 1" />
+    <img src="images/DataTrain2.png" alt="Data Train 2" />
+  </section>
+
+  <section>
+    <p><a href="index.html">Tilbage til forsiden</a></p>
+  </section>
 
   <footer>
     <p>© 2025 Yolande Omam | Portfolio</p>
