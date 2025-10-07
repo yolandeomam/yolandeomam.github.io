@@ -22,7 +22,6 @@
     <h2>Om projektet</h2>
     <p>Dette projekt udvikler en AI-baseret løsning til at automatisere booking og kundeservice, med fokus på naturlig sprogforståelse og intelligente anbefalinger.</p>
     
-    <p><a href="index.html">Tilbage til forsiden</a></p>
   </section>
 
   <section>
@@ -314,7 +313,53 @@ Assistant:
   </p>
 </section>
 
-  
+  <section>
+  <h2>Træning af data</h2>
+
+  <h3>Den første draft af data</h3>
+  <p>
+    KittyChat kan svare på spørgsmål om bookinger, men det er ikke muligt at oprette en booking som ny bruger eller eksisterende bruger.
+    KittyChat kan desværre ikke svare om katte i forretningen, andre oplysninger om katte, adoption eller andre typer spørgsmål.
+  </p>
+
+  <p><em>Billeder af første draft:</em></p>
+  <img src="DraftData1.png" alt="Draft Data 1" />
+  <img src="DraftData2.png" alt="Draft Data 2" />
+  <img src="DraftData3.png" alt="Draft Data 3" />
+
+  <h3>Data er trænet med nye indsigter</h3>
+  <p>
+    Efter at have tilføjet katte-emojis 🐾 og “miav”-udtryk i træningsdataen, samt et tabel-format til visning af fx alle katte i caféen, kan man observere følgende forbedringer i KittyChat-sprogmodellen:
+  </p>
+  <ul>
+    <li>Viser nu et mere læsbart format ved visning og output af tabeller</li>
+    <li>Foreslår tidspunkter for booking</li>
+    <li>Kan give klikbare links til katteadoption (dog ikke altid)</li>
+    <li>Kan endnu ikke give oplysninger om Lazy Catz’s generelle information, selvom det findes i data</li>
+    <li>Vælger selv, om den svarer på dansk eller engelsk</li>
+    <li>Svarer korrekt på spørgsmål om åbningstider</li>
+    <li>Viser kattens personlighed gennem brug af katte-emojis 🐱</li>
+  </ul>
+
+  <p>
+    Hvis en bruger er logget ind og får en tid via KittyChat, oprettes bookingen i Lazy Catz’ database, når brugeren bekræfter tiden – selvom der vises en fejlbesked. Dette skyldes, at der på nuværende tidspunkt endnu ikke findes en dedikeret bookingside på hjemmesiden.
+  </p>
+  <p>
+    Det betyder også, at KittyChat via en stored procedure kan foretage ændringer i databasen, men den har stadig vanskeligheder med at læse data direkte fra tabellerne i Lazy Catz’ database.
+  </p>
+  <p>
+    Dette kan relateres til selve definitionen af en sprogmodel: Den tager et input (fx en sætning, et spørgsmål eller en prompt) og beregner sandsynligheden for, hvilket næste ord (token) der mest sandsynligt følger. Derfor finder modellen måske ikke altid det eksakte ord eller den præcise værdi, man ønsker i databasen.
+  </p>
+
+  <p><em>Eksempler på trænet model i aktion:</em></p>
+  <img src="KittyChatRunning.png" alt="KittyChat Running" />
+  <img src="DataTrain1.png" alt="Data Train 1" />
+  <img src="DataTrain2.png" alt="Data Train 2" />
+</section>
+
+  <section>
+   <p><a href="index.html">Tilbage til forsiden</a></p>
+    </section>
 
   <footer>
     <p>© 2025 Yolande Omam | Portfolio</p>
