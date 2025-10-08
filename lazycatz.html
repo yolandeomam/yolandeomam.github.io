@@ -51,9 +51,9 @@ anvendes til booking, information om kattene og interaktion i caféen.</p>
    <section>
     <h2>Kundeprofil CRUD</h2>
 
-  <h3>Use Case 1: Kundens CRUD-operationer – Create, Read, Update, Delete</h3>
+  <h3>Use Case 2: Kundens CRUD-operationer – Create, Read, Update, Delete</h3>
 
-     <h4>1.1 Opret kundens profil</h4>
+     <h4>2.1 Opret kundens profil</h4>
   <p>
     Kunden åbner Lazy Catz’s hjemmeside for at oprette sin profil. Kunden angiver sit navn, email, telefonnummer, brugernavn 
     og adgangskode til sin profil og opretter sin profil. En mail sendes til kundens email for at bekræfte registrering, 
@@ -84,7 +84,7 @@ anvendes til booking, information om kattene og interaktion i caféen.</p>
     <li>Hvis kunden ikke bekræfter inden for 24 timer, forbliver profilen inaktiv.</li>
   </ul>
 
-  <h4>1.2 Se kundens profil</h4>
+  <h4>2.2 Se kundens profil</h4>
   <p>
     Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og kan se oplysninger om sin profil samt 
     information om sine transaktioner.
@@ -106,7 +106,7 @@ anvendes til booking, information om kattene og interaktion i caféen.</p>
     <li>Systemet viser profil og historik til kunden.</li>
   </ol>
 
-  <h4>1.3 Ret kundens profil</h4>
+  <h4>2.3 Ret kundens profil</h4>
   <p>
     Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og vælger at redigere sine oplysninger. 
     Kunden kan rette sit navn, email, telefonnummer, brugernavn og adgangskode. Efter ændringer er gjort, 
@@ -137,7 +137,7 @@ anvendes til booking, information om kattene og interaktion i caféen.</p>
     <li>Hvis kunden ikke selv foretog ændringen, bør kunden kontakte support.</li>
   </ul>
 
-  <h4>1.4 Slet kundens profil</h4>
+  <h4>2.4 Slet kundens profil</h4>
   <p>
     Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og vælger at slette sin profil. 
     Kunden får en bekræftelse både på hjemmesiden og via e-mail om, at profilen er slettet fra Lazy Catz’s system.
@@ -237,7 +237,7 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
 <section>
   <h2>Sprogmodel KittyChat</h2>
 
-  <h3>Use Case 2 - Brugeren kan kommunikere med chatbot KittyChat</h3>
+  <h3>Use Case 3 - Brugeren kan kommunikere med chatbot KittyChat</h3>
 
   <p>
     Brugeren går ind på Lazy Catz’s hjemmeside og ser chatbotten <strong>KittyChat</strong> nederst på skærmen. 
@@ -290,25 +290,18 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
   </ul>
 
     <h3>Artefakter</h3>
-    <h4>Objektmodel udvidet til Use Case 2</h4>
+    <h4>Objektmodel udvidet til Use Case 3</h4>
   <img src="images/Objektmodel-KittyChat.png" alt="Objektmodel-KittyChat" width="40%" style="margin-bottom:1rem;">
-     <h4>Domænemodel udvidet til Use Case 2</h4>
+     <h4>Domænemodel udvidet til Use Case 3</h4>
   <img src="images/Domænemodel-KittyChat.png" alt="Domænemodel-KittyChat" width="40%" style="margin-bottom:1rem;">
     
      <h4>System Sekvens Diagram - Brugeren kan kommunikere med chatbot KittyChat</h4>
   <img src="images/SSD-KittyChat.png" alt="SSD-KittyChat" width="40%" style="margin-bottom:1rem;">
 
       <h4>Operationskonkrakter</h4>
-  <img src="images/OperationsKontrakt-CRUD Kunde.png" alt="OperationsKontrakt-CRUD Kunde" width="100%" style="margin-bottom:1rem;">
+  <img src="images/OperationsKontrakt-KittyChat.png" alt="OperationsKontrakt-KittyChat" width="100%" style="margin-bottom:1rem;">
 
-     <h4>Sekvens Diagram</h4>
-     <h5>SD Create customer profile</h5>
-  <img src="images/SD-OpretKundensProfil.png" alt="SD-OpretKundensProfil" width="100%" style="margin-bottom:1rem;">
-     <h5>SD View customer profile</h5>
-  <img src="images/SD-SeKundensProfil.png" alt="SD-SeKundensProfil" width="100%" style="margin-bottom:1rem;">
-  <h5>SD Update customer profile</h5>
-  <img src="images/SD-RetKundensProfil.png" alt="SD-RetKundensProfil" width="100%" style="margin-bottom:1rem;">
-     <h5>SD Delete customer profile</h5>
+     <h4>Sekvens Diagram - Brugeren kan kommunikere med chatbot KittyChat</h4>
   <img src="images/SD-SletKundensProfil.png" alt="SD-SletKundensProfil" width="100%" style="margin-bottom:1rem;">
 
      <h4>Design Class Diagram / Pakkediagram</h4>
