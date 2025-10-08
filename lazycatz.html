@@ -49,7 +49,125 @@ anvendes til booking, information om kattene og interaktion i caféen.</p>
   </section>
 
    <section>
-    <h2>CRUD Operationer - Kunde</h2>
+    <h2>Kundeprofil CRUD</h2>
+
+  <h3>Use Case 1: Kundens CRUD-operationer – Create, Read, Update, Delete</h3>
+
+     <h4>1.1 Opret kundens profil</h4>
+  <p>
+    Kunden åbner Lazy Catz’s hjemmeside for at oprette sin profil. Kunden angiver sit navn, email, telefonnummer, brugernavn 
+    og adgangskode til sin profil og opretter sin profil. En mail sendes til kundens email for at bekræfte registrering, 
+    som kunden bekræfter – og nu er kunden registreret i Lazy Catz’s system.
+  </p>
+
+  <p><strong>Aktør:</strong> Kunde</p>
+  <p><strong>Mål:</strong> At oprette en ny profil i Lazy Catz-systemet.</p>
+
+  <h5>Præbetingelser</h5>
+  <ul>
+    <li>Kunden har adgang til Lazy Catz’s hjemmeside.</li>
+  </ul>
+
+  <h5>Hovedforløb</h5>
+  <ol>
+    <li>Kunden åbner Lazy Catz’s hjemmeside og vælger "Opret profil".</li>
+    <li>Systemet viser registreringsformular.</li>
+    <li>Kunden indtaster navn, email, telefon, brugernavn og adgangskode.</li>
+    <li>Systemet validerer inputdata, opretter kundeprofil i databasen og sender en bekræftelsesmail til kundens email.</li>
+    <li>Kunden klikker på linket i mailen for at bekræfte registreringen.</li>
+    <li>Systemet aktiverer kundens profil og viser en succesmeddelelse.</li>
+  </ol>
+
+  <h5>Alternativt forløb</h5>
+  <ul>
+    <li>Hvis email eller brugernavn allerede er registreret, viser systemet fejlbesked.</li>
+    <li>Hvis kunden ikke bekræfter inden for 24 timer, forbliver profilen inaktiv.</li>
+  </ul>
+
+  <h4>1.2 Se kundens profil</h4>
+  <p>
+    Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og kan se oplysninger om sin profil samt 
+    information om sine transaktioner.
+  </p>
+
+  <p><strong>Aktør:</strong> Kunde</p>
+  <p><strong>Mål:</strong> At se sine profiloplysninger og historik.</p>
+
+  <h5>Præbetingelser</h5>
+  <ul>
+    <li>Kunden er logget ind.</li>
+  </ul>
+
+  <h5>Hovedforløb</h5>
+  <ol>
+    <li>Kunden logger ind på hjemmesiden.</li>
+    <li>Systemet validerer login.</li>
+    <li>Systemet henter kundens profiloplysninger fra databasen samt bookinghistorik (transaktioner).</li>
+    <li>Systemet viser profil og historik til kunden.</li>
+  </ol>
+
+  <h4>1.3 Ret kundens profil</h4>
+  <p>
+    Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og vælger at redigere sine oplysninger. 
+    Kunden kan rette sit navn, email, telefonnummer, brugernavn og adgangskode. Efter ændringer er gjort, 
+    får kunden en bekræftelse på, at ændringer er registreret. For sikkerhed skyld modtager kunden en mail, 
+    hvis de ikke selv har foretaget ændringerne, og bedes kontakte Lazy Catz hurtigst muligt.
+  </p>
+
+  <p><strong>Aktør:</strong> Kunde</p>
+  <p><strong>Mål:</strong> At ændre sine profiloplysninger.</p>
+
+  <h5>Præbetingelser</h5>
+  <ul>
+    <li>Kunden er logget ind.</li>
+  </ul>
+
+  <h5>Hovedforløb</h5>
+  <ol>
+    <li>Kunden logger ind i sin profil og vælger "Rediger profil".</li>
+    <li>Systemet viser nuværende profiloplysninger.</li>
+    <li>Kunden ændrer navn, email, telefon, brugernavn og/eller adgangskode.</li>
+    <li>Systemet validerer de nye data og opdaterer kundens profil i databasen.</li>
+    <li>Systemet sender en mail om, at der er foretaget ændringer, og viser en bekræftelse til kunden.</li>
+  </ol>
+
+  <h5>Alternativt forløb</h5>
+  <ul>
+    <li>Hvis de nye data er ugyldige (fx email-format), viser systemet fejlbesked.</li>
+    <li>Hvis kunden ikke selv foretog ændringen, bør kunden kontakte support.</li>
+  </ul>
+
+  <h4>1.4 Slet kundens profil</h4>
+  <p>
+    Kunden logger ind i sin profil på Lazy Catz’s hjemmeside og vælger at slette sin profil. 
+    Kunden får en bekræftelse både på hjemmesiden og via e-mail om, at profilen er slettet fra Lazy Catz’s system.
+  </p>
+
+  <p><strong>Aktør:</strong> Kunde</p>
+  <p><strong>Mål:</strong> At slette sin profil permanent.</p>
+
+  <h5>Præbetingelser</h5>
+  <ul>
+    <li>Kunden er logget ind.</li>
+  </ul>
+
+  <h5>Hovedforløb</h5>
+  <ol>
+    <li>Kunden logger ind og vælger "Slet profil".</li>
+    <li>Systemet beder om bekræftelse og advarer om permanent sletning.</li>
+    <li>Kunden bekræfter sletningen.</li>
+    <li>Systemet sletter persondata fra databasen eller anonymiserer data.</li>
+    <li>Systemet bevarer bookinghistorik i anonym form, hvis forretningsregler kræver statistik.</li>
+    <li>Systemet sender bekræftelsesmail.</li>
+    <li>Systemet logger sletningstidspunkt (<em>slettetDato</em>).</li>
+    <li>Systemet viser besked om, at profilen er slettet.</li>
+  </ol>
+
+  <h5>Alternativt forløb</h5>
+  <ul>
+    <li>Hvis kunden annullerer handlingen, sker der ingen ændring.</li>
+    <li>Hvis der opstår systemfejl, informeres kunden, og support kontaktes.</li>
+  </ul>
 
      <h3>Artefakter</h3>
     <h4>Objektmodel</h4>
@@ -115,6 +233,62 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
     Kunde får Email notifikation vedrørende sletning af profil.
   </video>
      </section>
+
+<section>
+  <h2>Sprogmodel KittyChat</h2>
+
+  <h3>Use Case 2 - Brugeren kan kommunikere med chatbot KittyChat</h3>
+
+  <p>
+    Brugeren går ind på Lazy Catz’s hjemmeside og ser chatbotten <strong>KittyChat</strong> nederst på skærmen. 
+    Brugeren starter en samtale med chatbotten for at få hjælp. KittyChat svarer i et venligt og informativt sprog 
+    og kan hjælpe med flere typer forespørgsler — for eksempel at finde bookingmuligheder, åbningstider, eller 
+    give links til katteadoption og velfærd.
+  </p>
+
+  <p>
+    Chatbotten kan desuden tjekke tilgængelige tider i databasen (tabel <strong>BOOKING</strong>) og foreslå ledige tider. 
+    Hvis brugeren bekræfter et tidspunkt, registreres bookingen i databasen.
+  </p>
+
+  <h4>Detaljeret Use Case</h4>
+  <p><strong>Aktør:</strong> Bruger</p>
+  <p><strong>Mål:</strong> At kommunikere med chatbotten for at få information eller foretage booking.</p>
+
+  <h5>Præbetingelser</h5>
+  <ul>
+    <li>Brugeren er på Lazy Catz’s hjemmeside.</li>
+    <li>KittyChat er aktiv og forbundet til backend (API og database).</li>
+  </ul>
+
+  <h5>Hovedforløb</h5>
+  <ol>
+    <li>Brugeren åbner Lazy Catz’s hjemmeside.</li>
+    <li>Brugeren klikker på chat-ikonet for at starte en samtale med KittyChat.</li>
+    <li>KittyChat hilser brugeren med en velkomstbesked (fx “😺 Hej! Jeg er KittyChat. Hvordan kan jeg hjælpe dig i dag?”).</li>
+    <li>Brugeren stiller et spørgsmål, fx “Jeg vil gerne booke tid kl. 16.”</li>
+    <li>KittyChat analyserer brugerens besked (<em>intent:</em> booking_request).</li>
+    <li>Systemet henter information fra databasen (fx om tidspunktet er ledigt via tabel <strong>BOOKING</strong>).</li>
+    <li>KittyChat svarer med et forslag: “Tidspunktet er ledigt for 1 person kl. 16:00. Vil du bekræfte?”</li>
+    <li>Brugeren bekræfter.</li>
+    <li>Systemet opretter bookingen i databasen via en Stored Procedure.</li>
+    <li>KittyChat bekræfter bookingen: “Perfekt! Din tid er nu reserveret 😸”.</li>
+  </ol>
+
+  <h5>Alternativt forløb</h5>
+  <ul>
+    <li>Hvis tidspunktet ikke er ledigt, foreslår KittyChat andre ledige tider.</li>
+    <li>Hvis brugeren spørger om noget andet (fx “Hvad er jeres åbningstider?”), hentes svaret fra konteksten eller træningsdata, og KittyChat svarer direkte.</li>
+    <li>Hvis databasen ikke kan tilgås, viser KittyChat en fejlbesked: “Beklager, jeg kan ikke tjekke tider lige nu 🐾.”</li>
+  </ul>
+
+  <h5>Efterbetingelser</h5>
+  <ul>
+    <li>Brugerens forespørgsel er behandlet.</li>
+    <li>Eventuel booking er registreret i databasen.</li>
+    <li>Samtalen kan fortsætte med nye intents eller afsluttes af brugeren.</li>
+  </ul>
+
 
       <section>
     <h2>Programmet Link</h2>
