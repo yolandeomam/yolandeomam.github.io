@@ -50,6 +50,240 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
     
   </section>
 
+ <header>
+    <h1>Cyber Sikkerhed og Penetrationstest</h1>
+    <p>Analyse af cyberangreb, sårbarheder og sikkerhedstiltag for LazyCatz og KittyChat</p>
+  </header>
+
+  <section>
+    <h2>Cyberangreb</h2>
+    <p>Et <strong>cyberangreb</strong> er et bevidst forsøg fra en person eller gruppe på at bryde ind i, beskadige eller afbryde computersystemer, netværk eller digitale enheder, ofte til skadelige formål som datatyveri, spionage, økonomisk svindel eller systemangreb.</p>
+    <p><em>Kilde:</em> Hvad er et cyberangreb? | Microsoft Security</p>
+
+    <table>
+      <tr>
+        <th>Cyberangrebstype</th>
+        <th>Definition</th>
+        <th>Løsninger</th>
+      </tr>
+      <tr>
+        <td>Phishing / Social Engineering</td>
+        <td>Forsøg på at narre brugere til at afsløre følsomme oplysninger via falske e-mails, beskeder eller websider.</td>
+        <td>MFA for alle konti, medarbejderuddannelse.</td>
+      </tr>
+      <tr>
+        <td>Ransomware / Malware</td>
+        <td>Skadelig software der krypterer filer (ransomware) eller udfører skadelige handlinger (malware).</td>
+        <td>Regelmæssige backups, antivirus, netværkssegmentering, begrænsede privilegier.</td>
+      </tr>
+      <tr>
+        <td>DDoS</td>
+        <td>Overbelastning af server eller netværk med trafik for at gøre tjenester utilgængelige.</td>
+        <td>DDoS-beskyttelse, robust netværksinfrastruktur.</td>
+      </tr>
+      <tr>
+        <td>Man-in-the-Middle (MitM)</td>
+        <td>Angriber opsnapper og manipulerer kommunikation mellem to parter.</td>
+        <td>Kryptering (TLS), sikre netværk (VPN).</td>
+      </tr>
+      <tr>
+        <td>SQL Injection</td>
+        <td>Indsprøjtning af ondsindet SQL-kode i webformularer for at manipulere databaser.</td>
+        <td>Parameteriserede forespørgsler, WAF, pentests.</td>
+      </tr>
+      <tr>
+        <td>Cross-Site Scripting (XSS)</td>
+        <td>Indsprøjtning af skadelig kode i websider, som udføres i brugerens browser.</td>
+        <td>Output-encoding, CSP, inputvalidering, sikre skabeloner.</td>
+      </tr>
+      <tr>
+        <td>Insidertrusler</td>
+        <td>Skadelige eller uforsigtige handlinger fra interne brugere.</td>
+        <td>Begræns adgangsrettigheder og overvåg aktivitet.</td>
+      </tr>
+      <tr>
+        <td>Zero-Day-angreb</td>
+        <td>Udnyttelse af ukendte sårbarheder.</td>
+        <td>Regelmæssige opdateringer og patching.</td>
+      </tr>
+      <tr>
+        <td>Brute Force</td>
+        <td>Automatisk gætning af adgangskoder.</td>
+        <td>Begræns loginforsøg, stærke koder og 2FA.</td>
+      </tr>
+      <tr>
+        <td>Drive-By-Downloads</td>
+        <td>Uautoriseret download af malware fra inficerede hjemmesider.</td>
+        <td>Besøg kun sikre websteder, brug antivirus.</td>
+      </tr>
+      <tr>
+        <td>IoT-angreb</td>
+        <td>Angreb mod internetforbundne enheder med svag sikkerhed.</td>
+        <td>Opdater firmware, brug stærke adgangskoder.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Cyberangreb i forhold til LazyCatz og KittyChat</h2>
+    <table>
+      <tr>
+        <th>Cyberangrebstype</th>
+        <th>Relevans</th>
+        <th>Løsninger og Forebyggelse</th>
+      </tr>
+      <tr>
+        <td>Phishing / Social Engineering</td>
+        <td>Falske e-mails til brugere eller ansatte for at stjæle adgangsdata eller API-nøgler.</td>
+        <td>MFA, uddannelse, e-mail-filtrering.</td>
+      </tr>
+      <tr>
+        <td>SQL Injection</td>
+        <td>Begge systemer gemmer data i databaser og kan derfor rammes.</td>
+        <td>Parameteriserede forespørgsler, ORM, pentests.</td>
+      </tr>
+      <tr>
+        <td>XSS (Cross-Site Scripting)</td>
+        <td>Kan udnyttes i chat eller formularer.</td>
+        <td>Output-encoding, CSP, inputvalidering.</td>
+      </tr>
+      <tr>
+        <td>DDoS</td>
+        <td>Kan lamme realtidskommunikation og webtrafik.</td>
+        <td>DDoS-beskyttelse, load balancing, skalerbar hosting.</td>
+      </tr>
+      <tr>
+        <td>Brute Force</td>
+        <td>Gætning af adgangskoder til systemer.</td>
+        <td>Rate limiting, stærke kodepolitikker, 2FA.</td>
+      </tr>
+    </table>
+
+    <p><strong>Opsummering:</strong></p>
+    <ul>
+      <li><b>LazyCatz</b> er mest sårbar for: SQL Injection, XSS, Brute Force, Phishing og Ransomware.</li>
+      <li><b>KittyChat</b> er mest sårbar for: XSS, MitM, DDoS og Brute Force.</li>
+    </ul>
+
+    <p>Begge bør implementere HTTPS, regelmæssige backups, penetrationstests og overvågning.</p>
+  </section>
+
+  <section>
+    <h2>Projektbegrænsninger og nuværende sikkerhedstiltag</h2>
+    <p>Projektet omfatter ikke MFA, antivirus, netværkssegmentering eller VPN endnu, men fokuserer på:</p>
+    <ul>
+      <li>Regelmæssige backups via Azure</li>
+      <li>Begrænsede privilegier og adgangsstyring</li>
+      <li>DDoS-overvågning via Azure Monitor</li>
+      <li>HTTPS og HSTS med sikre cookies</li>
+      <li>Parameteriserede forespørgsler og ORM (Entity Framework)</li>
+      <li>Web- og netværkspenetrationstest</li>
+      <li>Inputvalidering og output-encoding</li>
+      <li>Overvågning af logins og dataændringer</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Beskyttelse mod cyberangreb</h2>
+    <p>Oversigt over implementerede sikkerhedstiltag i applikationer og database:</p>
+    <table>
+      <tr>
+        <th>Sikkerhedstiltag</th>
+        <th>LazyCatz (MVC App)</th>
+        <th>KittyChat (FastAPI / LLM)</th>
+        <th>Azure SQL Database (lazycatzdb)</th>
+      </tr>
+      <tr>
+        <td>Regelmæssige backups</td>
+        <td>Stoler på Azure’s automatiske full/differential backups.</td>
+        <td>Ingen lokal data; afhænger af Azure backup.</td>
+        <td>Automatiske full, differential og log backups (geo-redundant).</td>
+      </tr>
+      <tr>
+        <td>Begrænset adgang</td>
+        <td>Kun admin via rollebaseret kontrol; sikre cookies.</td>
+        <td>API-key beskyttet; miljøvariabler anvendes.</td>
+        <td>Database-login med mindst mulige rettigheder.</td>
+      </tr>
+      <tr>
+        <td>DDoS-beskyttelse</td>
+        <td>Azure Front Door og Azure Monitor.</td>
+        <td>CORS og rate limiting på endpoints.</td>
+        <td>Azure DDoS Protection Standard.</td>
+      </tr>
+      <tr>
+        <td>HTTPS</td>
+        <td>HSTS aktiveret; HTTPS-redirect i Program.cs.</td>
+        <td>Kun HTTPS-kommunikation tilladt.</td>
+        <td>TLS-forbindelser aktiveret (Encrypt=yes).</td>
+      </tr>
+      <tr>
+        <td>ORM og SQL-sikkerhed</td>
+        <td>Entity Framework med parameteriserede kald.</td>
+        <td>Pyodbc med parameteriserede stored procedures.</td>
+        <td>Stored procedures beskytter mod SQL injection.</td>
+      </tr>
+      <tr>
+        <td>Input- og outputvalidering</td>
+        <td>ASP.NET DataAnnotations og HTML-encoding.</td>
+        <td>Pydantic-modeller og JSON-validering.</td>
+        <td>Validering i stored procedures.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Hvad er en Penetrationstest?</h2>
+    <p>En <strong>penetrationstest</strong> (pentest) er et autoriseret, simuleret cyberangreb designet til at finde og dokumentere sårbarheder i et system. Formålet er at forbedre sikkerheden – ikke at skade systemet.</p>
+    <p><b>Autoriseret</b> betyder, at ejeren af systemet har givet tilladelse. <b>Simuleret</b> betyder, at testeren efterligner en hacker, men uden skadelige hensigter.</p>
+
+    <h3>Typer af penetrationstest</h3>
+    <ul>
+      <li>Black-box: ingen forhåndsviden (ekstern angriber).</li>
+      <li>White-box: fuld adgang (intern trussel).</li>
+      <li>Gray-box: delvis viden (kombination).</li>
+    </ul>
+
+    <h3>Områder for test</h3>
+    <ul>
+      <li>Network pentest</li>
+      <li>Web application pentest</li>
+      <li>Mobilapplikationstest</li>
+      <li>Social engineering test</li>
+      <li>Wireless pentest</li>
+      <li>Physical security tests</li>
+    </ul>
+
+    <p>Efter testen modtager virksomheden en rapport med identificerede sårbarheder, risikovurdering og anbefalinger til forbedring.</p>
+  </section>
+
+  <section>
+    <h2>Hacking vs Pentesting</h2>
+    <ul>
+      <li><b>Black Hat Hacker:</b> Udfører ulovlig hacking for personlig gevinst.</li>
+      <li><b>Grey Hat Hacker:</b> Hacker uden tilladelse, men informerer ejeren – evt. mod betaling.</li>
+      <li><b>White Hat Hacker:</b> Udfører lovlig, autoriseret hacking for at forbedre sikkerheden.</li>
+    </ul>
+
+    <h3>Krav for at blive en Ethical Hacker</h3>
+    <ul>
+      <li>Kendskab til operativsystemer (Windows, Linux, MacOS, Unix)</li>
+      <li>Kendskab til programmeringssprog som JavaScript og SQL</li>
+      <li>Forståelse for netværk og sikkerhedslovgivning</li>
+      <li>Certificering som <em>Certified Ethical Hacker (CEH)</em></li>
+    </ul>
+
+    <h3>De fem faser af etisk hacking</h3>
+    <ol>
+      <li><b>Reconnaissance:</b> Indsamling af oplysninger om målet.</li>
+      <li><b>Scanning:</b> Brug af værktøjer til at finde sårbarheder.</li>
+      <li><b>Gaining Access:</b> Udnytte sårbarheder til at opnå adgang.</li>
+      <li><b>Maintaining Access:</b> Opretholde adgang gennem bagdøre.</li>
+      <li><b>Cleaning Tracks:</b> Slette spor og logfiler for at skjule aktiviteter.</li>
+    </ol>
+  </section>
+
+  
   <section>
     <p><a href="index.html">Tilbage til forsiden</a></p>
   </section>
