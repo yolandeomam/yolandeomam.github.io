@@ -655,7 +655,29 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
     <img src="images/Parrot2.png" alt="Direkte kørsel af LazyCatz på Parrot" width="100%" style="margin-bottom:1rem;">
   <p>Dette er langsomt, derfor anvendes Windows PowerShell med Docker som alternativ til pentest.</p>
 
-    <h3>Brug af WindowsPowerShell for Pentesting med Docker</h3>
+   <h3>Brug af Windows PowerShell for Pentesting med Docker</h3>
+
+<p><strong>Forudsætninger:</strong></p>
+<ul>
+  <li>Kør PowerShell som Administrator</li>
+  <li>Download og installer Docker</li>
+</ul>
+
+<p><strong>Trin-for-trin vejledning:</strong></p>
+<ol>
+  <li>Gå til projektmappen i LazyCatz repository:
+    <pre><code>cd "C:\Users\omamy\Desktop\Uddannelse\Semester 4\LazyCatz\LazyCatz"</code></pre>
+  </li>
+  <li>Opret Docker-billede til LazyCatz projektet:
+    <pre><code>docker build -t lazycatz:local .</code></pre>
+  </li>
+  <li>Kør programmet på port 8080:
+    <pre><code>docker run -p 8080:80 lazycatz:local</code></pre>
+  </li>
+  <li>Kør med specifik databaseforbindelse (valgfrit):
+    <pre><code>docker run -p 8080:80 -e ConnectionStrings__DefaultConnection="Server=...;User ID=...;Password=...;" lazycatz:local</code></pre>
+  </li>
+</ol>
 
 </section>
 
