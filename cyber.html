@@ -15,19 +15,20 @@
 <body>
   <header>
     <h1>Cybersikkerhed</h1>
-    <p>Persondata beskyttelse og penetration testing</p>
+    <p>Persondata Beskyttelse og Penetrationstest</p>
   </header>
 
   <section>
     <h2>Om projektet</h2>
     <p>Fokus på datasikkerhed, GDPR-kompatibilitet og penetration testing af softwareprojekter for at sikre høj datasikkerhed.</p>
-
   </section>
 
-  <section>
-    <h2>Beskyttelse af persondata og GDPR</h2>
-    
-    <h3>Dokumenter vedrørende persondata-beskyttelse og GDPR</h3>
+    <header>
+    <h1>Persondata Beskyttelse og GDPR</h1>
+  </header>
+
+  <section>    
+    <h2>Dokumenter vedrørende persondata-beskyttelse og GDPR</h3>
     <p>Her kan du finde dokumenter vedrørende persondata-beskyttelse og GDPR i Lazy Catz:</p>
     <ul>
       <li><a href="docs/Lazy Catz GDPR Politik.pdf" target="_blank">Lazy Catz GDPR Politik (PDF)</a></li>
@@ -35,129 +36,136 @@
       <li><a href="docs/Anonymisering af persondata i Lazy Catz.pdf" target="_blank">Anonymisering af persondata i Lazy Catz’s system (PDF)</a></li>
     </ul>
     
-     <h3>Links til oplysninger</h3>
+     <h2>Links til oplysninger</h3>
     <p>Vi bruger oplysninger fra: </p>
   <p><a href="https://www.datatilsynet.dk/regler-og-vejledning/gdpr-univers-for-smaa-virksomheder/grundlaeggende-om-gdpr">Datatilsynet</a></p>
   <p><a href="https://europa.eu/youreurope/business/dealing-with-customers/data-protection/data-protection-gdpr/index_da.htm">EU Databeskyttelse i henhold til GDPR</a></p>      
   <p><a href="https://chatgpt.com/">ChatGPT</a></p> 
 
-    <h3>Sletning af kundens profile med Email notifikation og Anonymisering</h3>
+    <h2>Sletning af kundens profile med Email notifikation og Anonymisering</h3>
     <video width="100%" controls>
     <source src="videos/Sletning af kundens profile med Email notifikation og Anonymisering.mp4" type="video/mp4">
 Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fjernet permanent fra systemer.
     Kunde får Email notifikation vedrørende sletning af profil.
-  </video>
-    
+  </video>    
   </section>
 
  <header>
-    <h1>Cyber Sikkerhed og Penetrationstest</h1>
+    <h1>Penetrationstest</h1>
     <p>Analyse af cyberangreb, sårbarheder og sikkerhedstiltag for LazyCatz og KittyChat</p>
   </header>
 
   <section>
     <h2>Cyberangreb</h2>
     <p>Et <strong>cyberangreb</strong> er et bevidst forsøg fra en person eller gruppe på at bryde ind i, beskadige eller afbryde computersystemer, netværk eller digitale enheder, ofte til skadelige formål som datatyveri, spionage, økonomisk svindel eller systemangreb.</p>
-    <p><em>Kilde:</em> Hvad er et cyberangreb? | Microsoft Security</p>
+    <a href="https://www.microsoft.com/da-dk/security/business/security-101/what-is-a-cyberattack#:~:text=En%20cyberangreb%20er%20et%20bevidst%20fors%C3%B8g%20fra%20en,form%C3%A5l%2C%20f.eks.%20datatyveri%2C%20spionage%2C%20%C3%B8konomisk%20svindel%20eller%20systemangreb.?msockid=30566b1ef88a623216277e02f9f66359" target="_blank">Hvad er et cyberangreb</a>
 
-    <table>
-      <tr>
-        <th>Cyberangrebstype</th>
-        <th>Definition</th>
-        <th>Løsninger</th>
-      </tr>
-      <tr>
-        <td>Phishing / Social Engineering</td>
-        <td>Forsøg på at narre brugere til at afsløre følsomme oplysninger via falske e-mails, beskeder eller websider.</td>
-        <td>MFA for alle konti, medarbejderuddannelse.</td>
-      </tr>
-      <tr>
-        <td>Ransomware / Malware</td>
-        <td>Skadelig software der krypterer filer (ransomware) eller udfører skadelige handlinger (malware).</td>
-        <td>Regelmæssige backups, antivirus, netværkssegmentering, begrænsede privilegier.</td>
-      </tr>
-      <tr>
-        <td>DDoS</td>
-        <td>Overbelastning af server eller netværk med trafik for at gøre tjenester utilgængelige.</td>
-        <td>DDoS-beskyttelse, robust netværksinfrastruktur.</td>
-      </tr>
-      <tr>
-        <td>Man-in-the-Middle (MitM)</td>
-        <td>Angriber opsnapper og manipulerer kommunikation mellem to parter.</td>
-        <td>Kryptering (TLS), sikre netværk (VPN).</td>
-      </tr>
-      <tr>
-        <td>SQL Injection</td>
-        <td>Indsprøjtning af ondsindet SQL-kode i webformularer for at manipulere databaser.</td>
-        <td>Parameteriserede forespørgsler, WAF, pentests.</td>
-      </tr>
-      <tr>
-        <td>Cross-Site Scripting (XSS)</td>
-        <td>Indsprøjtning af skadelig kode i websider, som udføres i brugerens browser.</td>
-        <td>Output-encoding, CSP, inputvalidering, sikre skabeloner.</td>
-      </tr>
-      <tr>
-        <td>Insidertrusler</td>
-        <td>Skadelige eller uforsigtige handlinger fra interne brugere.</td>
-        <td>Begræns adgangsrettigheder og overvåg aktivitet.</td>
-      </tr>
-      <tr>
-        <td>Zero-Day-angreb</td>
-        <td>Udnyttelse af ukendte sårbarheder.</td>
-        <td>Regelmæssige opdateringer og patching.</td>
-      </tr>
-      <tr>
-        <td>Brute Force</td>
-        <td>Automatisk gætning af adgangskoder.</td>
-        <td>Begræns loginforsøg, stærke koder og 2FA.</td>
-      </tr>
-      <tr>
-        <td>Drive-By-Downloads</td>
-        <td>Uautoriseret download af malware fra inficerede hjemmesider.</td>
-        <td>Besøg kun sikre websteder, brug antivirus.</td>
-      </tr>
-      <tr>
-        <td>IoT-angreb</td>
-        <td>Angreb mod internetforbundne enheder med svag sikkerhed.</td>
-        <td>Opdater firmware, brug stærke adgangskoder.</td>
-      </tr>
-    </table>
+   <table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Cyberangrebstype</th>
+    <th style="border: 1px solid #333; padding: 8px;">Definition</th>
+    <th style="border: 1px solid #333; padding: 8px;">Løsninger</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Phishing / Social Engineering</td>
+    <td style="border: 1px solid #333; padding: 8px;">Forsøg på at narre brugere til at afsløre følsomme oplysninger via falske e-mails, beskeder eller websider.</td>
+    <td style="border: 1px solid #333; padding: 8px;">MFA for alle konti, medarbejderuddannelse.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Ransomware / Malware</td>
+    <td style="border: 1px solid #333; padding: 8px;">Skadelig software der krypterer filer (ransomware) eller udfører skadelige handlinger (malware).</td>
+    <td style="border: 1px solid #333; padding: 8px;">Regelmæssige backups, antivirus, netværkssegmentering, begrænsede privilegier.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">DDoS</td>
+    <td style="border: 1px solid #333; padding: 8px;">Overbelastning af server eller netværk med trafik for at gøre tjenester utilgængelige.</td>
+    <td style="border: 1px solid #333; padding: 8px;">DDoS-beskyttelse, robust netværksinfrastruktur.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Man-in-the-Middle (MitM)</td>
+    <td style="border: 1px solid #333; padding: 8px;">Angriber opsnapper og manipulerer kommunikation mellem to parter.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Kryptering (TLS), sikre netværk (VPN).</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">SQL Injection</td>
+    <td style="border: 1px solid #333; padding: 8px;">Indsprøjtning af ondsindet SQL-kode i webformularer for at manipulere databaser.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Parameteriserede forespørgsler, WAF, pentests.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Cross-Site Scripting (XSS)</td>
+    <td style="border: 1px solid #333; padding: 8px;">Indsprøjtning af skadelig kode i websider, som udføres i brugerens browser.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Output-encoding, CSP, inputvalidering, sikre skabeloner.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Insidertrusler</td>
+    <td style="border: 1px solid #333; padding: 8px;">Skadelige eller uforsigtige handlinger fra interne brugere.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Begræns adgangsrettigheder og overvåg aktivitet.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Zero-Day-angreb</td>
+    <td style="border: 1px solid #333; padding: 8px;">Udnyttelse af ukendte sårbarheder.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Regelmæssige opdateringer og patching.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Brute Force</td>
+    <td style="border: 1px solid #333; padding: 8px;">Automatisk gætning af adgangskoder.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Begræns loginforsøg, stærke koder og 2FA.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Drive-By-Downloads</td>
+    <td style="border: 1px solid #333; padding: 8px;">Uautoriseret download af malware fra inficerede hjemmesider.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Besøg kun sikre websteder, brug antivirus.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">IoT-angreb</td>
+    <td style="border: 1px solid #333; padding: 8px;">Angreb mod internetforbundne enheder med svag sikkerhed.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Opdater firmware, brug stærke adgangskoder.</td>
+  </tr>
+</table>
+
+      <p><strong>Læringskilder:</strong><br>
+      <a href="https://www.dkits.dk/post/13-almindelige-typer-cyberangreb-og-hvordan-man-forebygger-dem" target="_blank">13 almindelige typer angreb og hvordan man forebygger dem</a><br>
+      <a href="https://www.geeksforgeeks.org/blogs/cybersecurity-threats/" target="_blank">Top 10 Security Threats in 2025</a><br>
+      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+    </p>
+    
   </section>
 
   <section>
     <h2>Cyberangreb i forhold til LazyCatz og KittyChat</h2>
-    <table>
-      <tr>
-        <th>Cyberangrebstype</th>
-        <th>Relevans</th>
-        <th>Løsninger og Forebyggelse</th>
-      </tr>
-      <tr>
-        <td>Phishing / Social Engineering</td>
-        <td>Falske e-mails til brugere eller ansatte for at stjæle adgangsdata eller API-nøgler.</td>
-        <td>MFA, uddannelse, e-mail-filtrering.</td>
-      </tr>
-      <tr>
-        <td>SQL Injection</td>
-        <td>Begge systemer gemmer data i databaser og kan derfor rammes.</td>
-        <td>Parameteriserede forespørgsler, ORM, pentests.</td>
-      </tr>
-      <tr>
-        <td>XSS (Cross-Site Scripting)</td>
-        <td>Kan udnyttes i chat eller formularer.</td>
-        <td>Output-encoding, CSP, inputvalidering.</td>
-      </tr>
-      <tr>
-        <td>DDoS</td>
-        <td>Kan lamme realtidskommunikation og webtrafik.</td>
-        <td>DDoS-beskyttelse, load balancing, skalerbar hosting.</td>
-      </tr>
-      <tr>
-        <td>Brute Force</td>
-        <td>Gætning af adgangskoder til systemer.</td>
-        <td>Rate limiting, stærke kodepolitikker, 2FA.</td>
-      </tr>
-    </table>
+    <table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Cyberangrebstype</th>
+    <th style="border: 1px solid #333; padding: 8px;">Relevans</th>
+    <th style="border: 1px solid #333; padding: 8px;">Løsninger og Forebyggelse</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Phishing / Social Engineering</td>
+    <td style="border: 1px solid #333; padding: 8px;">Falske e-mails til brugere eller ansatte for at stjæle adgangsdata eller API-nøgler.</td>
+    <td style="border: 1px solid #333; padding: 8px;">MFA, uddannelse, e-mail-filtrering.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">SQL Injection</td>
+    <td style="border: 1px solid #333; padding: 8px;">Begge systemer gemmer data i databaser og kan derfor rammes.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Parameteriserede forespørgsler, ORM, pentests.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">XSS (Cross-Site Scripting)</td>
+    <td style="border: 1px solid #333; padding: 8px;">Kan udnyttes i chat eller formularer.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Output-encoding, CSP, inputvalidering.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">DDoS</td>
+    <td style="border: 1px solid #333; padding: 8px;">Kan lamme realtidskommunikation og webtrafik.</td>
+    <td style="border: 1px solid #333; padding: 8px;">DDoS-beskyttelse, load balancing, skalerbar hosting.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Brute Force</td>
+    <td style="border: 1px solid #333; padding: 8px;">Gætning af adgangskoder til systemer.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Rate limiting, stærke kodepolitikker, 2FA.</td>
+  </tr>
+</table>
+
 
     <p><strong>Opsummering:</strong></p>
     <ul>
@@ -186,103 +194,162 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
   <section>
     <h2>Beskyttelse mod cyberangreb</h2>
     <p>Oversigt over implementerede sikkerhedstiltag i applikationer og database:</p>
-    <table>
-      <tr>
-        <th>Sikkerhedstiltag</th>
-        <th>LazyCatz (MVC App)</th>
-        <th>KittyChat (FastAPI / LLM)</th>
-        <th>Azure SQL Database (lazycatzdb)</th>
-      </tr>
-      <tr>
-        <td>Regelmæssige backups</td>
-        <td>Stoler på Azure’s automatiske full/differential backups.</td>
-        <td>Ingen lokal data; afhænger af Azure backup.</td>
-        <td>Automatiske full, differential og log backups (geo-redundant).</td>
-      </tr>
-      <tr>
-        <td>Begrænset adgang</td>
-        <td>Kun admin via rollebaseret kontrol; sikre cookies.</td>
-        <td>API-key beskyttet; miljøvariabler anvendes.</td>
-        <td>Database-login med mindst mulige rettigheder.</td>
-      </tr>
-      <tr>
-        <td>DDoS-beskyttelse</td>
-        <td>Azure Front Door og Azure Monitor.</td>
-        <td>CORS og rate limiting på endpoints.</td>
-        <td>Azure DDoS Protection Standard.</td>
-      </tr>
-      <tr>
-        <td>HTTPS</td>
-        <td>HSTS aktiveret; HTTPS-redirect i Program.cs.</td>
-        <td>Kun HTTPS-kommunikation tilladt.</td>
-        <td>TLS-forbindelser aktiveret (Encrypt=yes).</td>
-      </tr>
-      <tr>
-        <td>ORM og SQL-sikkerhed</td>
-        <td>Entity Framework med parameteriserede kald.</td>
-        <td>Pyodbc med parameteriserede stored procedures.</td>
-        <td>Stored procedures beskytter mod SQL injection.</td>
-      </tr>
-      <tr>
-        <td>Input- og outputvalidering</td>
-        <td>ASP.NET DataAnnotations og HTML-encoding.</td>
-        <td>Pydantic-modeller og JSON-validering.</td>
-        <td>Validering i stored procedures.</td>
-      </tr>
-    </table>
+   <table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Sikkerhedstiltag</th>
+    <th style="border: 1px solid #333; padding: 8px;">LazyCatz (MVC App)</th>
+    <th style="border: 1px solid #333; padding: 8px;">KittyChat (FastAPI / LLM)</th>
+    <th style="border: 1px solid #333; padding: 8px;">Azure SQL Database (lazycatzdb)</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Regelmæssige backups</td>
+    <td style="border: 1px solid #333; padding: 8px;">Stoler på Azure’s automatiske full/differential backups.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Ingen lokal data; afhænger af Azure backup.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Automatiske full, differential og log backups (geo-redundant).</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Begrænset adgang</td>
+    <td style="border: 1px solid #333; padding: 8px;">Kun admin via rollebaseret kontrol; sikre cookies.</td>
+    <td style="border: 1px solid #333; padding: 8px;">API-key beskyttet; miljøvariabler anvendes.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Database-login med mindst mulige rettigheder.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">DDoS-beskyttelse</td>
+    <td style="border: 1px solid #333; padding: 8px;">Azure Front Door og Azure Monitor.</td>
+    <td style="border: 1px solid #333; padding: 8px;">CORS og rate limiting på endpoints.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Azure DDoS Protection Standard.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">HTTPS</td>
+    <td style="border: 1px solid #333; padding: 8px;">HSTS aktiveret; HTTPS-redirect i Program.cs.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Kun HTTPS-kommunikation tilladt.</td>
+    <td style="border: 1px solid #333; padding: 8px;">TLS-forbindelser aktiveret (Encrypt=yes).</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">ORM og SQL-sikkerhed</td>
+    <td style="border: 1px solid #333; padding: 8px;">Entity Framework med parameteriserede kald.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Pyodbc med parameteriserede stored procedures.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Stored procedures beskytter mod SQL injection.</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Input- og outputvalidering</td>
+    <td style="border: 1px solid #333; padding: 8px;">ASP.NET DataAnnotations og HTML-encoding.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Pydantic-modeller og JSON-validering.</td>
+    <td style="border: 1px solid #333; padding: 8px;">Validering i stored procedures.</td>
+  </tr>
+</table>
+
   </section>
 
   <section>
-    <h2>Hvad er en Penetrationstest?</h2>
-    <p>En <strong>penetrationstest</strong> (pentest) er et autoriseret, simuleret cyberangreb designet til at finde og dokumentere sårbarheder i et system. Formålet er at forbedre sikkerheden – ikke at skade systemet.</p>
-    <p><b>Autoriseret</b> betyder, at ejeren af systemet har givet tilladelse. <b>Simuleret</b> betyder, at testeren efterligner en hacker, men uden skadelige hensigter.</p>
+  <h2>Hvad er en Penetrationstest?</h2>
+  <p>En <strong>penetrationstest</strong> (pentest) er et autoriseret, simuleret cyberangreb, der anvender specifikke teknikker til at identificere systemets sårbarheder med det formål at iværksætte sikkerhedsforanstaltninger, der beskytter systemet mod potentielle cyberangreb.</p>
 
-    <h3>Typer af penetrationstest</h3>
-    <ul>
-      <li>Black-box: ingen forhåndsviden (ekstern angriber).</li>
-      <li>White-box: fuld adgang (intern trussel).</li>
-      <li>Gray-box: delvis viden (kombination).</li>
-    </ul>
+  <h3>Formålet med penetrationstesten</h3>
+  <p>Formålet med en penetrationstest er at efterligne virkelige cyberangreb på en kontrolleret og autoriseret måde for at afdække svagheder i et system, før en reel angriber kan udnytte dem. Testen udføres ikke for at skade systemet, men for at forbedre dets sikkerhed og modstandsdygtighed.</p>
 
-    <h3>Områder for test</h3>
-    <ul>
-      <li>Network pentest</li>
-      <li>Web application pentest</li>
-      <li>Mobilapplikationstest</li>
-      <li>Social engineering test</li>
-      <li>Wireless pentest</li>
-      <li>Physical security tests</li>
-    </ul>
+  <h3>“Autoriseret, simuleret cyberangreb”</h3>
+  <p><b>Autoriseret:</b> Ejeren af systemet har givet eksplicit tilladelse til, at testen må udføres, hvilket adskiller pentesten fra et egentligt cyberangreb.</p>
+  <p><b>Simuleret:</b> Testeren anvender de samme metoder, værktøjer og tænkemåder som en hacker (ofte kaldet en “ethical hacker”), men uden ondsindede hensigter. Både manuelle teknikker og automatiserede værktøjer kan anvendes for at identificere sårbarheder.</p>
 
-    <p>Efter testen modtager virksomheden en rapport med identificerede sårbarheder, risikovurdering og anbefalinger til forbedring.</p>
-  </section>
+  <h3>“Identificere systemets sårbarheder”</h3>
+  <p>Sårbarheder kan opstå på flere niveauer i et system:</p>
+  <ul>
+    <li><b>Netværksniveau:</b> Forkerte firewallregler, åbne porte, usikrede protokoller.</li>
+    <li><b>Applikationsniveau:</b> Fejl i koden, SQL Injection, XSS, manglende inputvalidering.</li>
+    <li><b>Brugerniveau:</b> Svage adgangskoder, manglende awareness, social engineering.</li>
+    <li><b>Konfigurationsniveau:</b> Uopdaterede systemer, forkerte sikkerhedsindstillinger.</li>
+  </ul>
+  <p>Formålet er at finde disse svagheder, dokumentere dem og demonstrere, hvordan de potentielt kan udnyttes.</p>
+
+  <h3>“Iværksætte sikkerhedsforanstaltninger”</h3>
+  <p>Efter testen modtager organisationen en rapport, som beskriver:</p>
+  <ul>
+    <li>Hvilke sårbarheder der blev fundet</li>
+    <li>Hvordan de kunne udnyttes</li>
+    <li>Vurdering af kritikalitet (risikoniveau)</li>
+    <li>Anbefalinger til afhjælpning – fx patching, kodeændringer, konfigurationsjusteringer eller awareness-træning</li>
+  </ul>
+  <p>Dette giver virksomheden et handlingsgrundlag for at forbedre sin cybersikkerhed proaktivt.</p>
+
+  <h3>Typer af penetrationstest</h3>
+  <ul>
+    <li><b>Black-box testing:</b> Testeren har ingen forhåndsviden om systemet (simulerer ekstern angriber).</li>
+    <li><b>White-box testing:</b> Testeren har fuld adgang til information (simulerer intern trussel).</li>
+    <li><b>Gray-box testing:</b> Testeren har delvis viden (kombination af de to ovenstående).</li>
+  </ul>
+
+    <img src="images/Pentest-Typer.png" alt="Typer af Pentest" width="100%" style="margin-bottom:1rem;">
+    <a href="https://penetrationtest.dk/" target="_blank">Hvad er Penetration Test</a>
+
+  <h3>Områder for test</h3>
+  <ul>
+    <li>Network pentest</li>
+    <li>Web application pentest</li>
+    <li>Mobilapplikationstest</li>
+    <li>Social engineering test</li>
+    <li>Wireless pentest</li>
+    <li>Physical security tests</li>
+  </ul>
+    
+</section>
+
+<section>
+  <h2>Hacking vs Pentesting</h2>
+  <img src="images/Pentest-Hacking.png" alt="Hacking vs Pentesting" width="100%" style="margin-bottom:1rem;">
+    <a href="https://www.securityblue.team/courses/introduction-to-penetration-testing" target="_blank">Free Course - Introduction To Penetration Testing </a>
+  <ul>
+    <li><b>Black Hat Hacker:</b> Udfører ulovlig hacking for personlig gevinst.</li>
+    <li><b>Grey Hat Hacker:</b> Hacker uden tilladelse, men informerer ejeren – evt. mod betaling.</li>
+    <li><b>White Hat Hacker:</b> Udfører lovlig, autoriseret hacking for at forbedre sikkerheden.</li>
+  </ul>
+
+  <h3>Krav for at blive en Ethical Hacker</h3>
+  <ul>
+    <li>Kendskab til operativsystemer (Windows, Linux, MacOS, Unix)</li>
+    <li>Kendskab til programmeringssprog som JavaScript og SQL</li>
+    <li>Forståelse for netværk og sikkerhedslovgivning</li>
+    <li>Certificering som <em>Certified Ethical Hacker (CEH)</em></li>
+  </ul>
+  <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=learn+about+penetration+test&&mid=FC711F41834F8E222BDCFC711F41834F8E222BDC&&FORM=VRDGAR" target="_blank">Video - Penetration Testing Full Course 2025</a>
+
+  <h3>De fem faser af etisk hacking</h3>
+  <ol>
+    <li><b>Reconnaissance:</b> Indsamling af oplysninger om målet aktivt eller passivt.</li>
+    <li><b>Scanning:</b> Brug af værktøjer til at finde sårbarheder.</li>
+    <li><b>Gaining Access:</b> Udnytte sårbarheder til at opnå adgang.</li>
+    <li><b>Maintaining Access:</b> Opretholde adgang via bagdøre om nødvendigt.</li>
+    <li><b>Cleaning Tracks:</b> Slette spor, logfiler og DNS-poster for at skjule aktiviteter; pentester tænker som en hacker.</li>
+  </ol>
+  <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=learn+about+penetration+test&&mid=FC711F41834F8E222BDCFC711F41834F8E222BDC&&FORM=VRDGAR" target="_blank">Video - Penetration Testing Full Course 2025</a>
+
+</section>
+
+<section>
+  <h3>Penetration testing livscyklus</h3>
+  <img src="images/Pentest-Lifecycle.png" alt="Penetration testing livscyklus" width="100%" style="margin-bottom:1rem;">
+    <a href="https://www.securityblue.team/courses/introduction-to-penetration-testing" target="_blank">Free Course - Introduction To Penetration Testing </a>
+  
+  <p>En penetrationstest er en kontrolleret, realistisk og systematisk metode til at teste et systems sikkerhedsniveau. Den efterligner en angribers adfærd for at:</p>
+  <ul>
+    <li>Identificere sårbarheder</li>
+    <li>Vurdere konsekvenserne af et muligt angreb</li>
+    <li>Give konkrete anbefalinger til forbedring</li>
+  </ul>
+  <p>Den fungerer som et diagnostisk værktøj, hvor formålet ikke blot er at finde fejl, men at styrke den samlede cybersikkerhed.</p>
+</section>
 
   <section>
-    <h2>Hacking vs Pentesting</h2>
-    <ul>
-      <li><b>Black Hat Hacker:</b> Udfører ulovlig hacking for personlig gevinst.</li>
-      <li><b>Grey Hat Hacker:</b> Hacker uden tilladelse, men informerer ejeren – evt. mod betaling.</li>
-      <li><b>White Hat Hacker:</b> Udfører lovlig, autoriseret hacking for at forbedre sikkerheden.</li>
-    </ul>
-
-    <h3>Krav for at blive en Ethical Hacker</h3>
-    <ul>
-      <li>Kendskab til operativsystemer (Windows, Linux, MacOS, Unix)</li>
-      <li>Kendskab til programmeringssprog som JavaScript og SQL</li>
-      <li>Forståelse for netværk og sikkerhedslovgivning</li>
-      <li>Certificering som <em>Certified Ethical Hacker (CEH)</em></li>
-    </ul>
-
-    <h3>De fem faser af etisk hacking</h3>
-    <ol>
-      <li><b>Reconnaissance:</b> Indsamling af oplysninger om målet.</li>
-      <li><b>Scanning:</b> Brug af værktøjer til at finde sårbarheder.</li>
-      <li><b>Gaining Access:</b> Udnytte sårbarheder til at opnå adgang.</li>
-      <li><b>Maintaining Access:</b> Opretholde adgang gennem bagdøre.</li>
-      <li><b>Cleaning Tracks:</b> Slette spor og logfiler for at skjule aktiviteter.</li>
-    </ol>
-  </section>
-
+      <p><strong>Læringskilder:</strong><br>
+      <a href="https://www.dkits.dk/post/13-almindelige-typer-cyberangreb-og-hvordan-man-forebygger-dem" target="_blank">13 almindelige typer angreb og hvordan man forebygger dem</a><br>
+      <a href="https://penetrationtest.dk/" target="_blank">Hvad er Penetration Test</a><br>
+        <a href="https://leaveamarkgroup.com/ciso-services/pentest/#:~:text=En%20penetrationstest%2C%20ofte%20kaldet%20en%20%E2%80%9Dpentest%E2%80%9D%2C%20er%20et,s%C3%A5rbarheder%20i%20et%20system%20og%20vurdere%20dets%20sikkerhedsniveau." target="_blank">Pentest og sårbarhedsscanning – opdag sikkerhedshuller</a><br>
+        <a href="https://gaffen87.github.io/posts/pentesting/" target="_blank">Hvad er pentesting?</a><br>
+        <a href="https://www.securityblue.team/courses/introduction-to-penetration-testing" target="_blank">Free Course - Introduction To Penetration Testing </a><br>
+        <a href="https://www.bing.com/videos/riverview/relatedvideo?&q=learn+about+penetration+test&&mid=FC711F41834F8E222BDCFC711F41834F8E222BDC&&FORM=VRDGAR" target="_blank">Video - Penetration Testing Full Course 2025</a><br>
+      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+    </p>
+    </section>
   
   <section>
     <p><a href="index.html">Tilbage til forsiden</a></p>
