@@ -448,6 +448,154 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
     <li>Physical security tests — LOW (kun relevant for on-site infrastruktur)</li>
   </ul>
 </section>
+ 
+  <section>
+  <h2>Doing Pentesting</h2>
+
+  <h3>Brug af Parrot Security til Pentesting</h3>
+  <p>Først vælger vi at anvende <strong>Parrot Security</strong> som operativsystem til penetrationstest, fordi det er en Linux-distribution designet til pentesting, digital forensics og sikkerhedsanalyse. Parrot kører i en virtuel maskine (VirtualBox), så vi kan teste programmer uden at påvirke host-systemet.</p>
+
+  <h4>Sammenligning af Parrot Security-udgaver</h4>
+  <table style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th style="border: 1px solid #333; padding: 8px;">Option</th>
+      <th style="border: 1px solid #333; padding: 8px;">Hvad det er</th>
+      <th style="border: 1px solid #333; padding: 8px;">Fordele</th>
+      <th style="border: 1px solid #333; padding: 8px;">Ulemper / Hvornår vælge</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Live</td>
+      <td style="border: 1px solid #333; padding: 8px;">Bootbar ISO (USB/optisk eller installation)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Native ydeevne; god til peripherals/driver-test</td>
+      <td style="border: 1px solid #333; padding: 8px;">Kræver reboot/installation; mindre praktisk til eksperimenter med snapshots. Bruges ved fysisk hardware eller maksimal ydeevne</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Virtual</td>
+      <td style="border: 1px solid #333; padding: 8px;">Forkonfigureret VM-image til VirtualBox/VMware</td>
+      <td style="border: 1px solid #333; padding: 8px;">Hurtig opsætning; isoleret fra host; snapshots & rollback; ideel til lab/CTF</td>
+      <td style="border: 1px solid #333; padding: 8px;">Lidt lavere ydeevne; afhænger af værtens ressourcer. Bruges til læring, øvelser eller isolerede tests</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">IoT</td>
+      <td style="border: 1px solid #333; padding: 8px;">Letvægtsbuild til ARM/embedded (Raspberry Pi)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Optimeret til IoT; lavt ressourceforbrug</td>
+      <td style="border: 1px solid #333; padding: 8px;">Ikke beregnet til almindelig pentesting; kun til ARM/Iot-tests</td>
+    </tr>
+  </table>
+
+  <h4>Valg af Virtual-udgave og Hypervisor</h4>
+  <p>Vi bruger Virtual-udgaven med option “Security”, fordi det giver en hurtig og sikker opsætning for pentesting.</p>
+  <ul>
+    <li>Hurtig og simpel opsætning (importér OVA og start)</li>
+    <li>Mulighed for snapshots og rollback — ideel til øvelser og eksperimenter</li>
+    <li>Isolerer pentest-miljøet fra host-systemet</li>
+    <li>God balance mellem funktionalitet og brugervenlighed til læring, CTF og web/applikationspentest</li>
+  </ul>
+
+  <table style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th style="border: 1px solid #333; padding: 8px;">Funktion</th>
+      <th style="border: 1px solid #333; padding: 8px;">VirtualBox</th>
+      <th style="border: 1px solid #333; padding: 8px;">VMware Workstation Player/Pro</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Licens</td>
+      <td style="border: 1px solid #333; padding: 8px;">Gratis (open source / Oracle build)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Player gratis til ikke-kommerciel brug; Pro kræver licens</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Import af Parrot (OVA)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Én-klik import; testet til VirtualBox</td>
+      <td style="border: 1px solid #333; padding: 8px;">Fungerer, men netværksadaptere kræver ofte justering</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Netværksopsætning</td>
+      <td style="border: 1px solid #333; padding: 8px;">NAT / Host-Only enkel</td>
+      <td style="border: 1px solid #333; padding: 8px;">Stærk, men interface-navne mere komplekse</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Ydeevne</td>
+      <td style="border: 1px solid #333; padding: 8px;">Lav RAM/CPU overhead</td>
+      <td style="border: 1px solid #333; padding: 8px;">Generelt hurtigere I/O og grafik</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Snapshots</td>
+      <td style="border: 1px solid #333; padding: 8px;">Indbygget (gratis)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Kun i Pro-version</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Integration med Windows-host</td>
+      <td style="border: 1px solid #333; padding: 8px;">Delt udklipsholder, træk-og-slip (efter Guest Additions)</td>
+      <td style="border: 1px solid #333; padding: 8px;">Bedre integration (delte mapper, copy/paste, display)</td>
+    </tr>
+  </table>
+
+  <h4>Parrot-strategier for Pentesting</h4>
+  <h5>Strategi 1 – Container-baseret (Docker)</h5>
+<p>Den første strategi fokuserer på at arbejde med container via Docker-image i Parrot VM.</p>
+    <h6>Praktisk øvelse på: <a href="https://owasp.org/www-project-juice-shop/" target="_blank">OWASP Juice Shop</a></h6>
+<p>Dette er blevet testet ved brug af Virtual Machine med ‘OWASP Juice Shop | OWASP Foundation’.</p>
+<p>Efter download af VirtualBox og Parrot, skal Parrot VM køres i VirtualBox. Terminalen skal være åben i Parrot.</p>
+<p>Opdater pakkelister og system i Parrot med:</p>
+<pre><code>sudo apt update && sudo apt full-upgrade -y</code></pre>
+<p>Log ind i Docker med:</p>
+<pre><code>podman login docker.io</code></pre>
+<p>Installer Docker med:</p>
+<pre><code>sudo apt install docker.io</code></pre>
+<p>Docker version 20.10.24+dfsg1 er nu installeret.</p>
+<p>Pull OWASP Juice Shop image med:</p>
+<pre><code>sudo docker pull bkimminich/juice-shop:latest</code></pre>
+<p>Kør OWASP Juice Shop container med:</p>
+<pre><code>sudo docker run -d --security-opt seccomp=unconfined --security-opt apparmor=unconfined -p 4000:3000 --name juice-shop bkimminich/juice-shop</code></pre>
+<p>Dette bruger det officielle image fra Docker Hub, binder port 4000 på host og tillader adgang til visse /proc-indstillinger.</p>
+<p>Applikationen kører nu på host på: <a href="http://10.0.2.15:4000/" target="_blank">http://10.0.2.15:4000/</a></p>
+
+<h6>Opsætning af Docker til LazyCatz på Parrot</h6>
+<p>Praktisk øvelse med vores MVC ASP .NET LazyCatz applikation.</p>
+<p>For det første: opret Dockerfile i PowerShell i projektmappen hvor .sln filen ligger.</p>
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Trin</th>
+    <th style="border: 1px solid #333; padding: 8px;">Beskrivelse</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Mount shared folder</td>
+    <td style="border: 1px solid #333; padding: 8px;">
+      Opret mount point: <code>sudo mkdir -p /mnt/lazycatz</code><br>
+      Mount Windows-mappen ‘LazyCatzShare’: <code>sudo mount -t vboxsf LazyCatzShare /mnt/lazycatz</code><br>
+      Gå til mappen: <code>cd /mnt/lazycatz</code><br>
+      <code>ls -la</code> # skal vise LazyCatz.sln og LazyCatz/
+    </td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Byg Docker-image</td>
+    <td style="border: 1px solid #333; padding: 8px;">
+      <code>sudo docker build --security-opt seccomp=unconfined --security-opt apparmor=unconfined -t lazycatz:local .</code><br>
+      Alternativt med Podman: <code>podman build -t lazycatz:local .</code><br>
+      <em>Bemærk:</em> Podman kan ikke anvendes her med visse /proc-tilladelser, derfor vælges Docker som alternativ.
+    </td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">Kør container</td>
+    <td style="border: 1px solid #333; padding: 8px;">
+      Bind port 4000:3000 og start containeren med Docker.
+    </td>
+  </tr>
+</table>
+
+  <h5>Strategi 2 – Direkte kørsel af LazyCatz</h5>
+  <p>LazyCatz køres direkte på Parrot VM uden container. Trin:</p>
+  <ul>
+    <li>Installer .NET SDK: <code>sudo apt update && sudo apt install -y dotnet-sdk-7.0</code></li>
+    <li>Gå til projektmappe: <code>cd ~/projects/lazycatz</code></li>
+    <li>Restore, build og run: <code>dotnet restore</code>, <code>dotnet build</code>, <code>dotnet run</code></li>
+  </ul>
+  <p>Dette er langsomt, derfor anvendes Windows PowerShell med Docker som alternativ til pentest.</p>
+
+    <h3>Brug af WindowsPowerShell for Pentesting med Docker</h3>
+
+</section>
 
   
   <section>
