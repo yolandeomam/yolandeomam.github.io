@@ -350,6 +350,105 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
       <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
     </p>
     </section>
+
+<section>
+  <h2>Værktøjer til Penetrationstest</h2>
+  <p>Der findes mange værktøjer til penetrationstest. De mest anvendte er:</p>
+
+  
+  <table style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th style="border: 1px solid #333; padding: 8px;">Tool</th>
+      <th style="border: 1px solid #333; padding: 8px;">Kategori</th>
+      <th style="border: 1px solid #333; padding: 8px;">Kort beskrivelse</th>
+      <th style="border: 1px solid #333; padding: 8px;">Typisk brug / hvornår vælge</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Nmap</td>
+      <td style="border: 1px solid #333; padding: 8px;">Recon / Port scanning</td>
+      <td style="border: 1px solid #333; padding: 8px;">Port- og serviceopdagelse, OS-detektion, scripting (NSE).</td>
+      <td style="border: 1px solid #333; padding: 8px;">Initial netværkskortlægning og service-fingerprinting.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Masscan</td>
+      <td style="border: 1px solid #333; padding: 8px;">Recon</td>
+      <td style="border: 1px solid #333; padding: 8px;">Ekstremt hurtig portscanner til store IP-range.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Internet-skala hurtig scanning (følg op med Nmap).</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Amass</td>
+      <td style="border: 1px solid #333; padding: 8px;">Recon / OSINT</td>
+      <td style="border: 1px solid #333; padding: 8px;">Subdomæne-opdagelse og DNS-intelligens.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Web-recon for at finde skjulte endpoints og assets.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Burp Suite</td>
+      <td style="border: 1px solid #333; padding: 8px;">Web app pentest</td>
+      <td style="border: 1px solid #333; padding: 8px;">Intercepting proxy, manuelle værktøjer, aktiv scanner (Pro).</td>
+      <td style="border: 1px solid #333; padding: 8px;">Interaktiv web-app testning og exploit-validering.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">OWASP ZAP</td>
+      <td style="border: 1px solid #333; padding: 8px;">Web app pentest</td>
+      <td style="border: 1px solid #333; padding: 8px;">Open-source proxy + automatiseret scanner.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Automatiserede web-scans / CI-integration; begynder-venlig.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">sqlmap</td>
+      <td style="border: 1px solid #333; padding: 8px;">Web app pentest</td>
+      <td style="border: 1px solid #333; padding: 8px;">Automatiseret SQL-injection opdagelse og udnyttelse.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Målrettet SQLi opdagelse og payload-test.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Nikto</td>
+      <td style="border: 1px solid #333; padding: 8px;">Webserver scanner</td>
+      <td style="border: 1px solid #333; padding: 8px;">Scanner webservere for fejlkonfigurationer og kendte problemer.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Hurtig kontrol af webservere og konfigurationsproblemer.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Metasploit Framework</td>
+      <td style="border: 1px solid #333; padding: 8px;">Exploitation</td>
+      <td style="border: 1px solid #333; padding: 8px;">Modulært exploit-framework med payloads og post-moduler.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Proof-of-concept exploitation og levering af payloads.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Nessus / OpenVAS</td>
+      <td style="border: 1px solid #333; padding: 8px;">Vulnerability scanning</td>
+      <td style="border: 1px solid #333; padding: 8px;">Automatiserede sårbarhedstjek og rapportering.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Bred sårbarhedsdækning / compliance-scanning.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Wireshark</td>
+      <td style="border: 1px solid #333; padding: 8px;">Packet analysis</td>
+      <td style="border: 1px solid #333; padding: 8px;">Detaljeret pakkeinspektion og protokol-debugging.</td>
+      <td style="border: 1px solid #333; padding: 8px;">Analyser netværkstrafik og detekter protokolproblemer.</td>
+    </tr>
+  </table>
+  
+  <h3>Sammenfatning til vores projekt</h3>
+  <p>Lazy Catz er primært en web/HTTPS-applikation (ASP.NET MVC), hostet fra staging/cloud/VMs. KittyChat er en FastAPI-service med HTTP- og WebSocket-endpoints, hostet på server eller container.</p>
+
+  <p>Her anvender vi <b>gray-box testing</b> fordi:</p>
+  <ul>
+    <li>Hurtig effekt på begge projekter — giver høj-impact fund uden at gennemgå al kildekode.</li>
+    <li>Lazy Catz (ASP.NET MVC): vi kender ruter og loginflow — målrettet test af auth/roller, CSRF, XSS og fil-upload med Burp/mitmproxy + sqlmap på DB-endpoints.</li>
+    <li>KittyChat (FastAPI + WebSocket/LLM): vi kender chat-endpoints — fokus på WebSocket-interception, prompt-injection, token/JWT-håndtering og logging/data-eksponering.</li>
+    <li>Effektiv fejlfinding: kombination af automatiske scans (ZAP/Nikto) og manuel manipulation (Burp Repeater/mitmproxy) for præcis validering.</li>
+    <li>Sikkert i staging: ikke-destruktive tests og kontrollerede prompt-prober passer til udviklingsmiljøet.</li>
+    <li>Læringsfokus: hands-on brug af værktøjer giver bedre forståelse af sårbarheder i vores apps.</li>
+  </ul>
+
+  <h3>Prioritering af Pentest-typer</h3>
+  <ul>
+    <li>Web application pentest — HIGH (must-do for både Lazy Catz og KittyChat)</li>
+    <li>Network pentest — MEDIUM (letvægt host/service scan i staging)</li>
+    <li>Mobile application test — LOW (ingen mobile clients endnu)</li>
+    <li>Social engineering test — LOW (kun Product Owner, ingen ansatte; optional)</li>
+    <li>Wireless pentest — LOW (kun hvis kontrol over Wi-Fi anvendt af applikationer)</li>
+    <li>Physical security tests — LOW (kun relevant for on-site infrastruktur)</li>
+  </ul>
+</section>
+
   
   <section>
     <p><a href="index.html">Tilbage til forsiden</a></p>
