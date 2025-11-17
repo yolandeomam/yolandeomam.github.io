@@ -674,8 +674,12 @@ Vedrørende sletning af kundens profil bliver den anonymieret og efter 5 år fje
   <li>Kør programmet på port 8080:
     <pre><code>docker run -p 8080:80 lazycatz:local</code></pre>
   </li>
-  <li>Kør med specifik databaseforbindelse (valgfrit):
+  <li>Kør med specifik databaseforbindelse (nødvendigt for at kunne have adgang til database):
     <pre><code>docker run -p 8080:80 -e ConnectionStrings__DefaultConnection="Server=...;User ID=...;Password=...;" lazycatz:local</code></pre>
+  </li>
+  <li>Men vi har kørt Docker image  med ASP.NET, fordi den reads ASPNETCORE_URLS to override which URLs it listens on. For Docker: 
+docker run -p 8080:80 -e ASPNETCORE_URLS=http://+:80 -e:
+    <pre><code>docker run -p 5000:80 -e ASPNETCORE_URLS=http://+:80 -e ConnectionStrings__DefaultConnection="Server=lazycatz.database.windows.net;Database=lazycatzdb;User Id=cadmin;Password=laZycatp4sS!;TrustServerCertificate=True;" lazycatz:local </code></pre>
   </li>
 </ol>
 
