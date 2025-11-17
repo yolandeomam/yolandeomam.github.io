@@ -81,11 +81,8 @@
     <p>Fokus på datasikkerhed, GDPR-kompatibilitet og penetration testing af softwareprojekter for at sikre høj datasikkerhed.</p>
   </section>
 
-  <section>
-  <h2>Læringsmål: Cybersikkerhed, Persondata & Web Application Pentesting</h2>
-
  <section>
-  <h2>Læringsmål: Cybersikkerhed & Beskyttelse af Persondata</h2>
+  <h2>Læringsmål: Cybersikkerhed, Persondata & Web Application Pentesting</h2>
 
   <h3>Viden</h3>
   <ul>
@@ -1032,8 +1029,7 @@ py sqlmap.py -u "http://localhost:3000/rest/products/search?q=apple" --batch
       <a href="https://thetechcrime.com/sqlmap-tutorial/#:~:text=SQLMap%20is%20an%20open-source%20penetration%20testing%20tool%20used,it%E2%80%99s%20essential%2C%20and%20how%20to%20use%20it%20ethically." target="_blank">SQLMap Tutorial: The Ultimate Guide for Beginners in 2025</a><br>
       <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
     </p>
-<h4>NB:</h4>
-<p>Alt pentesting skal være autoriseret, da det er ulovligt at hacke uautoriserede systemer.</p>
+<h4>NB: Alt pentesting skal være autoriseret, da det er ulovligt at hacke uautoriserede systemer.</h4>
 
 <h3>Trin for Webapplikations-pentest på LazyCatz MVC ASP .NET webapplikation</h3>
     
@@ -1129,7 +1125,7 @@ docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" inst
 </pre>
 
 <p>Når man kører sqlmap, kan man bruge levels fra 1 til 5 og/eller risikoniveauer fra 1 til 3, afhængigt af hvor aggressiv man ønsker at være over for det målrettede system.</p>  
-<p>SQLMap levels:</p>
+<p><strong>SQLMap levels:</strong></p>
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
     <th style="border: 1px solid #333; padding: 8px;">Level</th>
@@ -1158,7 +1154,7 @@ docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" inst
 </table>
 
 
-<p>SQLMap risks:</p>
+<p><strong>SQLMap risks:</strong></p>
 <table style="border-collapse: collapse; width: 100%;">
   <tr>
     <th style="border: 1px solid #333; padding: 8px;">Risk</th>
@@ -1181,7 +1177,7 @@ docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" inst
 
 <p>I vores tilfælde vælger vi level 5 + risk 3, fordi målet er grundig pentest, ikke “hurtig scanning”. Det giver den mest komplette søgning efter sårbarheder.</p>
 
-<h4>Vulnerability test med --batch</h4>
+<h4>Sårbarheder test med --batch</h4>
 <pre>
 py sqlmap.py -u "http://localhost:5000/Chat/SendMessage"
 --data="message=vil+gerne+booke+tid+til+2+personer+i+morgen+kl.14"
