@@ -81,9 +81,224 @@
     <p>Fokus på datasikkerhed, GDPR-kompatibilitet og penetration testing af softwareprojekter for at sikre høj datasikkerhed.</p>
   </section>
 
+  <section>
+  <h2>Læringsmål: Cybersikkerhed, Persondata & Web Application Pentesting</h2>
+
+ <section>
+  <h2>Læringsmål: Cybersikkerhed & Beskyttelse af Persondata</h2>
+
+  <h3>Viden</h3>
+  <ul>
+    <li>Den studerende har viden om grundlæggende cybersikkerhed og beskyttelse af persondata.</li>
+    <li>Den studerende forstår centrale sårbarheder som SQL Injection, XSS og Broken Authentication.</li>
+    <li>Den studerende har viden om webapplikationers opbygning, sessions, cookies og tokens.</li>
+    <li>Den studerende forstår lovmæssige og etiske rammer for pentest, herunder GDPR.</li>
+    <li>Den studerende har kendskab til værktøjer som Nmap, SQLMap og Docker testmiljøer.</li>
+  </ul>
+
+  <h3>Færdigheder</h3>
+  <ul>
+    <li>Den studerende kan identificere og sikre korrekt håndtering af persondata i websystemer.</li>
+    <li>Den studerende kan opsætte sikre og isolerede pentest-miljøer i Docker.</li>
+    <li>Den studerende kan anvende Nmap til port- og servicescanning.</li>
+    <li>Den studerende kan gennemføre SQL Injection-test med SQLMap.</li>
+    <li>Den studerende kan identificere og dokumentere sikkerhedsfejl i webapplikationer.</li>
+  </ul>
+
+  <h3>Kompetencer</h3>
+  <ul>
+    <li>Den studerende kan arbejde systematisk og ansvarligt med hele pentest-processen.</li>
+    <li>Den studerende kan selvstændigt tilegne sig nye værktøjer og angrebsteknikker.</li>
+    <li>Den studerende kan analysere sikkerhedsrisici i relation til GDPR og persondata.</li>
+    <li>Den studerende kan implementere relevante sikkerhedsforanstaltninger mod kendte angreb.</li>
+    <li>Den studerende kan udforme teknisk dokumentation og omsætte resultater til udviklingspraksis.</li>
+  </ul>
+</section>
+
+
+
     <header>
     <h1>Persondata Beskyttelse og GDPR</h1>
   </header>
+
+  <section>
+  <h1>GDPR Compliance Overview</h1>
+
+  <h2>Introduction</h2>
+  <p>Alle virksomheder i EU, inklusiv Danmark, skal overholde GDPR (General Data Protection Regulation). Denne sektion giver et samlet overblik over vores håndtering af personoplysninger.</p>
+
+  <hr>
+
+  <h2>Typer af personoplysninger</h2>
+
+  <h3>Ikke-følsomme personoplysninger</h3>
+  <ul>
+    <li>Navn, adresse, alder</li>
+    <li>Email, telefonnummer</li>
+    <li>Uddannelse og ansættelsesforhold</li>
+    <li>Billeder og private forhold</li>
+    <li>Bolig, bil, CV, eksamener</li>
+    <li>Sygedage og tjenstlige forhold</li>
+  </ul>
+
+  <h3>Følsomme personoplysninger</h3>
+  <ul>
+    <li>Helbredsoplysninger</li>
+    <li>Race og etnisk oprindelse</li>
+    <li>Politisk overbevisning</li>
+    <li>Religiøs eller filosofisk overbevisning</li>
+    <li>Fagforeningsmæssigt tilhørsforhold</li>
+    <li>Genetiske og biometriske data</li>
+    <li>Seksuelle forhold eller orientering</li>
+  </ul>
+
+  <h3>Oplysninger om strafbare forhold</h3>
+  <p>F.eks. straffeattest eller registrering af adresse i fængsel.</p>
+
+  <hr>
+
+  <h2>7 Steps to GDPR-Compliance</h2>
+
+  <h3>1. Skab overblik</h3>
+  <ul>
+    <li>Hvor findes data? (Emails, databaser, Azure)</li>
+    <li>Hvem registreres? (Kunder, evt. ansatte)</li>
+    <li>Hvilke data? (Ikke-følsomme data som navn, email, telefon)</li>
+  </ul>
+
+  <h3>2. Formål med databehandling</h3>
+  <ul>
+    <li>Gemning og bekræftelse af kundebookinger</li>
+    <li>Kommunikation med kunder</li>
+  </ul>
+
+  <h3>3. Opbevaring & Sletning</h3>
+  <ul>
+    <li>Ved anmodning: anonymisering straks, fuld sletning efter 5 år (bogføringspligt)</li>
+    <li>1 års inaktivitet → konto inaktiv → anonymisering</li>
+    <li>Efter 5 år → permanent sletning</li>
+  </ul>
+
+  <h3>4. Oplysningspligt</h3>
+  <p>Kunden informeres i bekræftelsesmail om databehandling og rettigheder.</p>
+
+  <h3>5. Procedurer</h3>
+
+  <h4>5.1 Adgangsstyring</h4>
+  <ul>
+    <li>Kun relevante medarbejdere får adgang</li>
+    <li>Roller: Administrator, Support, Drift</li>
+    <li>Årlig adgangskontrol</li>
+  </ul>
+
+  <h4>5.2 Nye kunder</h4>
+  <ul>
+    <li>Kun nødvendige oplysninger indsamles</li>
+    <li>Bekræftelsesmail med GDPR-info</li>
+    <li>Konto aktiveres kun efter email-bekræftelse</li>
+  </ul>
+
+  <h4>5.3 Opdatering af data</h4>
+  <ul>
+    <li>Ændringer logges med tidspunkt og feltnavne</li>
+    <li>Kunden modtager advarselsmail</li>
+    <li>Support-ændringer kræver identitetskontrol</li>
+  </ul>
+
+  <h4>5.4 Sletning & Anonymisering</h4>
+  <ul>
+    <li>Anmodning → anonymisering → slettes efter 5 år</li>
+    <li>1 års inaktivitet → anonymisering</li>
+    <li>Bookinghistorik må beholdes i anonymiseret form</li>
+  </ul>
+
+  <h4>5.5 Databrud</h4>
+  <ul>
+    <li>Dokumentér hændelsen (tid, årsag, omfang, berørte)</li>
+    <li>Vurdér indrapportering til Datatilsynet (72 timer)</li>
+    <li>Kontakt berørte kunder hurtigt</li>
+  </ul>
+
+  <h4>5.6 Årlig revision</h4>
+  <ul>
+    <li>Alle procedurer gennemgås årligt</li>
+    <li>Årlig GDPR-træning for medarbejdere</li>
+    <li>GDPR-introduktion for nye medarbejdere</li>
+  </ul>
+
+  <h3>6. Sikkerhedstiltag</h3>
+  <ul>
+    <li>Kryptering (data i hvile og i transit)</li>
+    <li>Backupstrategi (log, fuld, delvis backup)</li>
+    <li>Adgangskontrol og beskyttelse mod misbrug</li>
+  </ul>
+
+  <h3>7. Data-deling</h3>
+  <p>Ingen ekstern deling. Data lagres i Azure Cloud, hvor virksomheden er dataansvarlig.</p>
+
+  <hr>
+
+  <h2>GDPR - Grundprincipper</h2>
+
+  <table style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th style="border: 1px solid #333; padding: 8px;">Princip</th>
+      <th style="border: 1px solid #333; padding: 8px;">Forklaring</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Lovlighed & gennemsigtighed</td>
+      <td style="border: 1px solid #333; padding: 8px;">Databehandling skal have lovligt grundlag og være tydeligt beskrevet.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Formålsbegrænsning</td>
+      <td style="border: 1px solid #333; padding: 8px;">Data må kun indsamles til specifikke legitime formål.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Dataminimering</td>
+      <td style="border: 1px solid #333; padding: 8px;">Kun nødvendige data må indsamles.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Korrekthed</td>
+      <td style="border: 1px solid #333; padding: 8px;">Data skal være opdaterede og korrekte.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Opbevaringsbegrænsning</td>
+      <td style="border: 1px solid #333; padding: 8px;">Data slettes når formålet er opfyldt.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Integritet & fortrolighed</td>
+      <td style="border: 1px solid #333; padding: 8px;">Data skal beskyttes mod misbrug og uautoriseret adgang.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 8px;">Ansvarlighed</td>
+      <td style="border: 1px solid #333; padding: 8px;">Virksomheden skal kunne dokumentere GDPR-overholdelse.</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h2>Hvornår gælder GDPR ikke?</h2>
+  <ul>
+    <li>Personen er død</li>
+    <li>Personen er en juridisk person</li>
+    <li>Behandlingen udføres privat og ikke erhvervsmæssigt</li>
+  </ul>
+
+  <hr>
+
+  <h2>Security by Design</h2>
+  <ul>
+    <li>Kun autoriserede medarbejdere har adgang</li>
+    <li>Kun nødvendige kundedata registreres</li>
+    <li>EmailService sender bekræftelses- og sikkerhedsnotifikationer</li>
+    <li>Ændringer logges i systemet</li>
+    <li>Anonymisering efter 1 år / sletning efter 5 år</li>
+    <li>Dokumentation af sikkerhedsbrud</li>
+    <li>Årlig GDPR-træning + onboarding-træning</li>
+  </ul>
+
+</section>
+
 
   <section>    
     <h2>Dokumenter vedrørende persondata-beskyttelse og GDPR</h3>
@@ -682,6 +897,332 @@ docker run -p 8080:80 -e ASPNETCORE_URLS=http://+:80 -e:
     <pre><code>docker run -p 5000:80 -e ASPNETCORE_URLS=http://+:80 -e ConnectionStrings__DefaultConnection="Server=lazycatz.database.windows.net;Database=lazycatzdb;User Id=cadmin;Password=laZycatp4sS!;TrustServerCertificate=True;" lazycatz:local </code></pre>
   </li>
 </ol>
+
+
+    <h2>Valg af værktøjer til Webapplikations-pentest</h2>
+
+<p>Vi har valgt at fokusere på to værktøjer til webapplikations-pentest:</p>
+
+<h3>Værktøj – Nmap</h3>
+<p>Nmap, også kaldet Network Mapper, er et værktøj, der bruges til at scanne netværk, identificere aktive hosts, finde åbne porte og detektere hvilke services, der kører på disse porte.</p>
+<p>Det er et vigtigt værktøj i rekognosceringsfasen af pentest, da det hjælper med at indsamle nødvendige oplysninger om mål-systemet.</p>
+
+<h4>Nmap kan:</h4>
+<ul>
+  <li><strong>Portscanning:</strong> Identificere hvilke porte der er åbne på det givne system (mål-system).</li>
+  <li><strong>Servicedetektion:</strong> Identificere hvilke services der kører på de åbne porte.</li>
+  <li><strong>Operativsystemdetektion:</strong> Bestemme hvilket operativsystem, der kører på mål-host.</li>
+  <li><strong>Sårbarhedsanalyse:</strong> Køre scripts for at finde mulige sårbarheder i de detekterede services.</li>
+</ul>
+
+<h4>Nmap kommandoer</h4>
+<p><strong>For scanning og portscanning</strong></p>
+<pre>
+nmap &lt;target&gt;           # Grundlæggende scanning af mål-system
+nmap -v &lt;target&gt;        # Verbose scanning med detaljeret output
+nmap -p &lt;port-range&gt; &lt;target&gt;  # Scanne specifikke porte inden for et interval
+</pre>
+
+<p><strong>For servicedetektion</strong></p>
+<pre>nmap -sV &lt;target&gt;  # Identificere services og deres versioner på de åbne porte</pre>
+
+<p><strong>For operativsystemdetektion</strong></p>
+<pre>nmap -O &lt;target&gt;  # Identificere operativsystemet på mål-systemet</pre>
+
+<p><strong>For sårbarhedsanalyse</strong></p>
+<pre>
+nmap -sC &lt;target&gt;  # Standard scripts for at identificere sårbarheder
+nmap -A &lt;target&gt;   # Aggressiv scanning, der kombinerer forskellige teknikker
+</pre>
+
+<p><strong>Læringskilder:</strong><br>
+      <a href="https://cybersamir.com/how-to-use-nmap-for-penetration-testing-in-2025/#:~:text=Nmap%2C%20short%20for%20%E2%80%9CNetwork%20Mapper%2C%E2%80%9D%20is%20a%20powerful,ports%2C%20and%20detect%20services%20running%20on%20those%20ports." target="_blank">How to Use Nmap for Penetration Testing in 2025 - Cyber Samir</a><br>
+      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+    </p>
+
+<h3>Værktøj – sqlmap</h3>
+<p>Sqlmap er et Python-baseret værktøj, der bruges til at identificere og udnytte SQL-injektionssårbarheder i webapplikationer. Det gør det muligt at se og udtrække oplysninger fra databaser, tabeller og kolonner, som er knyttet til mål-websiden, så man kan enumerere eller interagere med back-end databasen.</p>
+
+<h4>Installation af sqlmap</h4>
+<p>I Kali Linux er sqlmap forudinstalleret og kan køres direkte fra terminalen med ‘sqlmap’.</p>
+<p>I Windows eller macOS kan det installeres således:</p>
+<pre>
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+cd sqlmap-dev
+py sqlmap.py
+</pre>
+        <img src="images/sqlmap-install.png" alt="Sqlmap Installation" width="100%" style="margin-bottom:1rem;">
+
+<h4>Sqlmap syntaks</h4>
+<p>For at anvende sqlmap skal man definere en URL med parameter:</p>
+<pre>sqlmap -u "http://target.com/page.php?id=1"</pre>
+<p>Parametrene definerer det punkt, hvor injektion kan ske, fx:</p>
+<ul>
+  <li>?id=1</li>
+  <li>?acc=2</li>
+  <li>?user=admin</li>
+  <li>?amount=1000</li>
+</ul>
+<p>Parametre kan findes via browserens DevTools:</p>
+<ul>
+  <li>Åbn websiden i browseren</li>
+  <li>Tryk F12 → Network fanen</li>
+  <li>Interager med funktioner som Login, Search, User profile</li>
+  <li>Observer hvilke HTTP-forespørgsler der vises i Network</li>
+</ul>
+<p>Hver forespørgsel er en kandidat, fx:</p>
+<ul>
+  <li>GET /rest/products/search?q=apple</li>
+  <li>POST /api/Recycles/</li>
+  <li>POST /rest/user/login</li>
+</ul>
+
+<h4>Flag der styrer sqlmap test</h4>
+<p>For at finde sårbarheder:</p>
+<pre>
+--batch # Udfør grundlæggende scan for SQL-injektionssårbarheder
+sqlmap -u "http://example.com/page.php?id=1" --batch
+</pre>
+
+<p>For at udtrække data:</p>
+<ul>
+  <li>--banner  # Udtræk information fra DBMS</li>
+  <li>--dbs  # Liste over databaser</li>
+  <li>--tables  # Liste over tabeller</li>
+  <li>--dump  # Udtræk data fra tabeller</li>
+  <li>--columns  # Liste over kolonner</li>
+</ul>
+
+<h4>Test af sqlmap på VM med Juiceshop</h4>
+<pre>
+# Opret mappe 'juiceshop-reports'
+$reportFolder = "$env:USERPROFILE\juiceshop-reports"
+New-Item -ItemType Directory -Path $reportFolder -Force
+Write-Output "Report folder: $reportFolder"
+
+# Opret testnetværk
+docker network create pentest-juice
+
+# Kør Juiceshop testinstans
+docker run -d --name juiceshop-test --network pentest-juice -e NODE_ENV=unsafe -p 3000:3000 bkimminich/juice-shop
+
+# Testinstansen kører på http://localhost:3000
+</pre>
+   <img src="images/Test-Juiceshop.png" alt="Kørsel af Juiceshop på porten 3000" width="100%" style="margin-bottom:1rem;"> 
+
+<h4>Kør sqlmap</h4>
+<p><strong> Find URL med parameter via DevTools:</strong></p>
+     <video width="100%" controls>
+    <source src="videos/SqlmapUrl.mp4" type="video/mp4">
+Finde url med parameter for Juiceshop hjemmeside.
+  </video>
+    <p>Ved at trykke på FN+F12 på HP computer -> Åbn DevTools -> Tryk på Network -> interagere med Juiceshop hjemmeside for at se, hvor der er REST operationer. 
+
+Her finder vi at, når vi søger for eksempel ‘apple’, får vi resultater for en REST HTTP request og q=apple er derfor den parameter. Den url link er: </p>
+<pre>
+http://localhost:3000/#/search?q=apple
+  </pre>
+  <p><strong> Brug sqlmap (--batch) for at finde sårbarheder </strong></p>
+    <pre>
+py sqlmap.py -u "http://localhost:3000/rest/products/search?q=apple" --batch
+</pre>
+     <img src="images/sqlmap-batch-juiceshop.png" alt="Kørsel af --batch flag på Juiceshop" width="100%" style="margin-bottom:1rem;"> 
+
+     <p><strong>Læringskilder:</strong><br>
+      <a href="https://thetechcrime.com/sqlmap-tutorial/#:~:text=SQLMap%20is%20an%20open-source%20penetration%20testing%20tool%20used,it%E2%80%99s%20essential%2C%20and%20how%20to%20use%20it%20ethically." target="_blank">SQLMap Tutorial: The Ultimate Guide for Beginners in 2025</a><br>
+      <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+    </p>
+<h4>NB:</h4>
+<p>Alt pentesting skal være autoriseret, da det er ulovligt at hacke uautoriserede systemer.</p>
+
+<h3>Trin for Webapplikations-pentest på LazyCatz MVC ASP .NET webapplikation</h3>
+    
+<p><strong>Opret mappe for at gemme resultater af test</strong></p>
+<pre>
+# Opret mappe til Nmap
+$scanFolder = "$env:USERPROFILE\nmap-reports"
+New-Item -ItemType Directory -Path $scanFolder -Force
+Write-Output "Scan folder: $scanFolder"
+
+# Opret mappe til sqlmap
+$scanFolder = "$env:USERPROFILE\sqlmap-reports"
+New-Item -ItemType Directory -Path $scanFolder -Force
+Write-Output "Report folder: $scanFolder"
+</pre>
+
+    <p><strong>Opret testmiljø</strong></p>
+    <p>For at udføre Pentest skal vi oprette et testmiljø. I Windows PowerShell gør vi det ved at oprette et isoleret Docker-netværk til pentest via:</p>
+    <pre>
+# Opret testmiljø
+docker network create pentest-net
+      </pre>
+
+      <p><strong>Kør LazyCatz testinstans</strong></p>
+       <p>Det handler om at køre en test-instans af Lazycatz uden at mappe port til host (undgå at forstyrre den "rigtige" app) </p>
+    <pre>
+# Kør LazyCatz testinstans
+docker run -d --name lazycatz-test --network pentest-net -p 5000:80 -e ASPNETCORE_URLS="http://+:80" -e ConnectionStrings__DefaultConnection="Server=lazycatz.database.windows.net;Database=lazycatzdb;User Id=cadmin;Password=laZycatp4sS!;TrustServerCertificate=True;" lazycatz:local
+</pre>
+    <img src="images/Pentest-LazyCatz.png" alt="Kørsel af LazyCatz testinstans" width="100%" style="margin-bottom:1rem;"> 
+
+<h4>Nmap scanning</h4>
+<pre>
+# Basic scan
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap lazycatz-test -oN /out/basic.txt
+  <img src="images/Nmap-Basic.png" alt="Kørsel af Nmap-Basic" width="100%" style="margin-bottom:1rem;">
+
+# Verbose scan
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -v lazycatz-test -oN /out/verbose.txt
+<img src="images/Nmap-Verbose.png" alt="Kørsel af Nmap-Verbose" width="100%" style="margin-bottom:1rem;">
+  
+# Ports 1-1000
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -p 1-1000 lazycatz-test -oN /out/portrange.txt
+<img src="images/Nmap-Port.png" alt="Kørsel af Nmap-Port" width="100%" style="margin-bottom:1rem;">
+  
+# Service detection
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -sV lazycatz-test -oN /out/service.txt
+<img src="images/Nmap-Service.png" alt="Kørsel af Nmap-Service" width="100%" style="margin-bottom:1rem;">
+  
+# Operativ System detection
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -O lazycatz-test -oN /out/os.txt
+<img src="images/Nmap-Operativsystem.png" alt="Kørsel af Nmap-Operativsystem" width="100%" style="margin-bottom:1rem;">
+  
+# Standard scripts
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -sC lazycatz-test -oN /out/defaultscripts.txt
+<img src="images/Nmap-Default.png" alt="Kørsel af Nmap-Default-Scripts" width="100%" style="margin-bottom:1rem;">
+  
+# Aggressiv scan
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap -A lazycatz-test -oN /out/aggressive.txt
+<img src="images/Nmap-Aggressive-Scan.png" alt="Kørsel af Nmap-Aggressiv-Scan" width="100%" style="margin-bottom:1rem;">
+  
+# HTTP metoder
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap --script http-methods -p 80 lazycatz-test -oN /out/http_methods.txt
+<img src="images/Nmap-HttpMetoder.png" alt="Kørsel af Nmap-Http-Metoder" width="100%" style="margin-bottom:1rem;">
+  
+# HTTP sikkerhedsheaders
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap --script http-security-headers -p 80 lazycatz-test -oN /out/security_headers.txt
+<img src="images/Nmap-HttpSecurityHeaders.png" alt="Kørsel af Nmap-Http-Security-Headers" width="100%" style="margin-bottom:1rem;">
+  
+# HTTP sårbarheder
+docker run --rm --network pentest-net -v "C:\Users\omamy\nmap-reports:/out" instrumentisto/nmap --script "http-vuln*,vuln" -p 80 lazycatz-test -oN /out/http_vuln.txt
+<img src="images/Nmap-HttpVul.png" alt="Kørsel af Nmap-Http-sårbarheder" width="100%" style="margin-bottom:1rem;">
+</pre>
+
+<h4>Nmap – konklusion</h4>
+<p>Scanningen gav følgende resultater:</p>
+<ul>
+  <li>Portscanning: Kun port 80/tcp er åben med HTTP. Alle andre porte (1–1000) er lukkede.</li>
+  <li>Servicedetektion: Port 80 kører HTTP med Microsoft Kestrel. Understøttede metoder: GET, HEAD, POST, OPTIONS. Websiden viser titlen “Hjem – LazyCatz”.</li>
+  <li>OS detection: Nmap gætter på Linux kernel 4.x–5.x eller MikroTik RouterOS 7.x, muligvis OpenWrt 21.02. Host virker som et generelt system.</li>
+  <li>Sårbarhedsanalyse: Ingen kritiske sårbarheder blev fundet med standard- og HTTP-scripts. Ingen CSRF, DOM-baseret eller stored XSS blev detekteret. HTTP security headers gav ingen output.</li>
+</ul>
+
+<p>Kort opsummering: Én åben port (80/tcp) med Kestrel HTTP-service på Linux-baseret system. Ingen kendte web-sårbarheder fundet.</p>
+
+<h4>Sqlmap test</h4>
+<p><strong>Definition af URL:</strong></p>
+ <p>For at definere URL’en med parameter har vi interageret med chatbotten KittyChat, som viser en POST-anmodning, hvor:</p>   
+<pre>
+-u http://localhost:5000/Chat/SendMessage
+--data="message=vil+gerne+booke+tid+til+2+personer+i+morgen+kl.14"
+--cookie=".AspNetCore.Antiforgery.I6jYj0Ya2Do=CfDJ8P-LRMs0J6xJnS-EHL5NTfk5HsbXpgCTT2H_wa6ItVbSv7tp3F0cAXwZxpHCgpSU77ApMd57czN5BSjeXkEC7NIX6Ie012G91JL5K2I8GaU9iCi4PdaS9Ilgp2oxpEwwq_fHcTBzaWoukSnIP4EC7DQ; .AspNetCore.Session=CfDJ8P%2BLRMs0J6xJnS%2BEHL5NTfnxG1mrJglLuc5R2clj4IQlwKL0Lz1yznTcxDSIOjZduqMdNbGssUxC57pKc%2FzV3E6TyTi5bcn%2FOLcs3%2BxS9WPoh8tCET%2Fl%2F9OgAdZdEno4NsBYwZ31Sj%2F9O%2F8cZ4UcOe2%2BtNVEgR4Q%2Fm6fRJrR4xd5; language=en; welcomebanner_status=dismiss; continueCode=aj4QDO4KyOqPJ7j2novp9EQ38gYVAJlGM1wWxalND5reZRLzmXk6BbmzZRb3; .AspNetCore.Antiforgery.VyLW6ORzMgk=CfDJ8Lw9_9HcKIxBrXPYfAeG58B7Xt_HL7BIlXQIfWcl2o5tYSzvLxCpPzz5D-HjjlLt6vxmn4T1VNCNG2f4J1P7zkSPagdcp0_kb_T9SYFuRX3TdE2_N8vwkNan-uYJTKWhWodd8TUvsYAehK9zLyYiGrc"
+</pre>
+
+<p>Når man kører sqlmap, kan man bruge levels fra 1 til 5 og/eller risikoniveauer fra 1 til 3, afhængigt af hvor aggressiv man ønsker at være over for det målrettede system.</p>  
+<p>SQLMap levels:</p>
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Level</th>
+    <th style="border: 1px solid #333; padding: 8px;">Beskrivelse</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">1</td>
+    <td style="border: 1px solid #333; padding: 8px;">Grundlæggende test (hurtigst)</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">2</td>
+    <td style="border: 1px solid #333; padding: 8px;">Flere payloads og parametre</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">3</td>
+    <td style="border: 1px solid #333; padding: 8px;">Tester også HTTP‑headers (User-Agent, Accept…)</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">4</td>
+    <td style="border: 1px solid #333; padding: 8px;">Tester Referer, Cookie, Host, flere kombinationer</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">5</td>
+    <td style="border: 1px solid #333; padding: 8px;">Fuld dækning af alle mulige injektionspunkter</td>
+  </tr>
+</table>
+
+
+<p>SQLMap risks:</p>
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #333; padding: 8px;">Risk</th>
+    <th style="border: 1px solid #333; padding: 8px;">Beskrivelse</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">1</td>
+    <td style="border: 1px solid #333; padding: 8px;">Sikkereste test, standard</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">2</td>
+    <td style="border: 1px solid #333; padding: 8px;">Tungere test, kan belaste systemet</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #333; padding: 8px;">3</td>
+    <td style="border: 1px solid #333; padding: 8px;">Mest aggressive test (fx time-based, tunge UNION-checks)</td>
+  </tr>
+</table>
+
+
+<p>I vores tilfælde vælger vi level 5 + risk 3, fordi målet er grundig pentest, ikke “hurtig scanning”. Det giver den mest komplette søgning efter sårbarheder.</p>
+
+<h4>Vulnerability test med --batch</h4>
+<pre>
+py sqlmap.py -u "http://localhost:5000/Chat/SendMessage"
+--data="message=vil+gerne+booke+tid+til+2+personer+i+morgen+kl.14"
+--cookie=".AspNetCore.Antiforgery.I6jYj0Ya2Do=CfDJ8P-LRMs0J6xJnS-EHL5NTfk5HsbXpgCTT2H_wa6ItVbSv7tp3F0cAXwZxpHCgpSU77ApMd57czN5BSjeXkEC7NIX6Ie012G91JL5K2I8GaU9iCi4PdaS9Ilgp2oxpEwwq_fHcTBzaWoukSnIP4EC7DQ; .AspNetCore.Session=CfDJ8P%2BLRMs0J6xJnS%2BEHL5NTfnxG1mrJglLuc5R2clj4IQlwKL0Lz1yznTcxDSIOjZduqMdNbGssUxC57pKc%2FzV3E6TyTi5bcn%2FOLcs3%2BxS9WPoh8tCET%2Fl%2F9OgAdZdEno4NsBYwZ31Sj%2F9O%2F8cZ4UcOe2%2BtNVEgR4Q%2Fm6fRJrR4xd5; language=en; welcomebanner_status=dismiss; continueCode=aj4QDO4KyOqPJ7j2novp9EQ38gYVAJlGM1wWxalND5reZRLzmXk6BbmzZRb3; .AspNetCore.Antiforgery.VyLW6ORzMgk=CfDJ8Lw9_9HcKIxBrXPYfAeG58B7Xt_HL7BIlXQIfWcl2o5tYSzvLxCpPzz5D-HjjlLt6vxmn4T1VNCNG2f4J1P7zkSPagdcp0_kb_T9SYFuRX3TdE2_N8vwkNan-uYJTKWhWodd8TUvsYAehK9zLyYiGrc"
+--batch --level=5 --risk=3 --output-dir="$scanFolder"
+</pre>
+    <video width="100%" controls>
+    <source src="videos/sqlmap-batch-LazyCatz.mp4" type="video/mp4">
+Kørsel af sqlmap --batch
+  </video>    
+
+<h4>Ekstraktion af data med --dbs</h4>
+<pre>
+py sqlmap.py -u "http://localhost:5000/Chat/SendMessage"
+--data="message=vil+gerne+booke+tid+til+2+personer+i+morgen+kl.14"
+--cookie=".AspNetCore.Antiforgery.I6jYj0Ya2Do=CfDJ8P-LRMs0J6xJnS-EHL5NTfk5HsbXpgCTT2H_wa6ItVbSv7tp3F0cAXwZxpHCgpSU77ApMd57czN5BSjeXkEC7NIX6Ie012G91JL5K2I8GaU9iCi4PdaS9Ilgp2oxpEwwq_fHcTBzaWoukSnIP4EC7DQ; .AspNetCore.Session=CfDJ8P%2BLRMs0J6xJnS%2BEHL5NTfnxG1mrJglLuc5R2clj4IQlwKL0Lz1yznTcxDSIOjZduqMdNbGssUxC57pKc%2FzV3E6TyTi5bcn%2FOLcs3%2BxS9WPoh8tCET%2Fl%2F9OgAdZdEno4NsBYwZ31Sj%2F9O%2F8cZ4UcOe2%2BtNVEgR4Q%2Fm6fRJrR4xd5; language=en; welcomebanner_status=dismiss; continueCode=aj4QDO4KyOqPJ7j2novp9EQ38gYVAJlGM1wWxalND5reZRLzmXk6BbmzZRb3; .AspNetCore.Antiforgery.VyLW6ORzMgk=CfDJ8Lw9_9HcKIxBrXPYfAeG58B7Xt_HL7BIlXQIfWcl2o5tYSzvLxCpPzz5D-HjjlLt6vxmn4T1VNCNG2f4J1P7zkSPagdcp0_kb_T9SYFuRX3TdE2_N8vwkNan-uYJTKWhWodd8TUvsYAehK9zLyYiGrc"
+--dbs --level=5 --risk=3 --output-dir="$env:USERPROFILE\sqlmap-reports"
+</pre>
+    <img src="images/sqlmap-dbs.png" alt="Kørsel af sqlmap --dbs" width="100%" style="margin-bottom:1rem;">
+
+<h4>Konklusion</h4>
+<p>Baseret på --batch og --dbs kan vi se, at LazyCatz webapplikation er beskyttet mod SQL-injektion, da vi bruger parameteriserede SQL-forespørgsler.</p>
+
+<h3>Fremtidige perspektiver</h3>
+    <p>For at kunne fortsætte med webapplikations‑pentest kan man fortsætte med at anvende andre teknikker såsom:</p>
+<ul>
+  <li>Burp Suite Community – Interceptere HTTP/HTTPS-anmodninger</li>
+  <li>OWASP ZAP — Webproxy med scanning af HTTP(S) og web-sårbarheder</li>
+  <li>Mitmproxy — Scriptbar proxy til gentagne WebSocket/API-sekvenser</li>
+  <li>Gobuster — Directory/endpoint enumeration</li>
+  <li>Wireshark — Dyb packet-analyse</li>
+</ul>
+
+<p>For at styrke kompetencer indenfor pentest bør man også øve andre typer pentest:</p>
+<ul>
+  <li>Netværkspentest</li>
+  <li>Mobilapplikationstest</li>
+  <li>Social engineering test</li>
+  <li>Wireless pentest</li>
+  <li>Fysisk sikkerhedstest</li>
+</ul>
 
 </section>
 
